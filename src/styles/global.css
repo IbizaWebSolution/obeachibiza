@@ -239,11 +239,13 @@ body.no-custom-cursor .HeroCTA__media.has-video-control video {
 /* Áreas táctiles ampliadas sin cambio visual (a11y): la zona clicable  */
 /* crece con un pseudo-elemento transparente; el aspecto no varía.      */
 /* ------------------------------------------------------------------ */
+/* OJO: .BurgerMenu__close NO va aquí — el tema lo posiciona absolute
+   (arriba a la derecha) y un position:relative lo saca de su sitio;
+   su ::after funciona igual por estar ya posicionado */
 .flickity-page-dots .flickity-page-dot,
 .CardsRow__carousel-nav-button,
 .EventsRow__carousel-nav-button,
-.Footer__icons a,
-.BurgerMenu__close {
+.Footer__icons a {
   position: relative;
 }
 .flickity-page-dots .flickity-page-dot::after,
