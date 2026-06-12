@@ -1,0 +1,45 @@
+{
+  "type": "Carousel",
+  "props": {
+    "options": {
+      "cellCount": 1,
+      "instagramStyleProgressBar": false,
+      "carousel_if_greater_than": [],
+      "cellAlign": "left",
+      "contain": true,
+      "freeScroll": false,
+      "lazyLoad": 3,
+      "fade": "true",
+      "autoPlay": false,
+      "wrapAround": true,
+      "cellSelector": ".Slide",
+      "pageDots": false,
+      "groupCells": false,
+      "prevNextButtons": false,
+      "hash": false,
+      "imagesLoaded": true,
+      "setGallerySize": true,
+      "draggable": true,
+      "adaptiveHeight": false,
+      "identifier": ""
+    },
+    "identifier": "",
+    "slides": [
+      {
+        "options": { "someOption": "value", "transition": "grow" },
+        "image": {
+          "src": "/media/2023/08/ob-work-with-us-2-aspect-ratio-5-2-aspect-ratio-1-1.webp",
+          "width": 2304,
+          "height": 2304,
+          "alt": "",
+          "ratio": "2304/2304",
+          "fallback": "100%"
+        },
+        "label": "What our staff say about us",
+        "title": "Never the same",
+        "description": "There are never two days the same at O Beach, you realise that immediately when you start work here, you are living a new experience every single day.",
+        "credit": "LUIS, WAITER"
+      }
+    ]
+  }
+}

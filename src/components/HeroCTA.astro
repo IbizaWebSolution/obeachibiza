@@ -1,0 +1,179 @@
+---
+interface PictureSource {
+  /** Media query del <source>, p. ej. "(min-aspect-ratio: 10/5)". Omitir en el último source. */
+  media?: string;
+  /** URL local del recurso (puede ser "" en heros sin imagen asignada). */
+  srcset: string;
+}
+
+interface Props {
+  /** HeroCTA--default | HeroCTA--rounded */
+  variant?: 'default' | 'rounded';
+  /** HeroCTA--image | HeroCTA--video */
+  mediaType: 'image' | 'video';
+  /** HeroCTA--x-left | HeroCTA--x-center */
+  x: 'left' | 'center';
+  /** HeroCTA--y-bottom | HeroCTA--y-center */
+  y: 'bottom' | 'center';
+  /** Modificador extra de imagen: featured-image | image-fullscreen | image-narrow */
+  imageStyle?: 'featured-image' | 'image-fullscreen' | 'image-narrow';
+  /** true => HeroCTA--intro-animation + circulo de intro + style="opacity: 0" (home) */
+  introAnimation?: boolean;
+  /** Texto del Marquee--bar inferior (home). Si se define, añade HeroCTA--marquee. */
+  marqueeText?: string;
+  /** Imagen simple (featured image de WP o HeroCTA__single-image) */
+  image?: {
+    src: string;
+    width?: number;
+    height?: number;
+    alt?: string;
+    class?: string;
+  };
+  /** Imagen responsive <picture> multi aspect-ratio */
+  picture?: {
+    sources: PictureSource[];
+    src: string;
+    alt?: string;
+  };
+  /** Vídeo de fondo (rutas locales ya resueltas de media-map.json) */
+  video?: {
+    mp4: string;
+    poster: string;
+  };
+  /** Contenido del título (puede llevar <br> o entidades; si es "" no se renderiza) */
+  titleHtml?: string;
+  /** Etiqueta del título: h1 por defecto; usar h2 en heros secundarios para no duplicar h1 (la clase HeroCTA__title define toda la tipografía, el cambio de etiqueta no afecta al estilo) */
+  titleTag?: 'h1' | 'h2';
+  /** Logo dentro de HeroCTA__banner_logo (p. ej. Bonito Hotel) */
+  bannerLogo?: {
+    src: string;
+    alt?: string;
+  };
+  /** CTA dentro de HeroCTA__banner_logo */
+  button?: {
+    href: string;
+    label: string;
+  };
+}
+
+const {
+  variant = 'default',
+  mediaType,
+  x,
+  y,
+  imageStyle,
+  introAnimation = false,
+  marqueeText,
+  image,
+  picture,
+  video,
+  titleHtml = '',
+  titleTag = 'h1',
+  bannerLogo,
+  button,
+} = Astro.props;
+
+const TitleTag = titleTag;
+
+// alt descriptivo: si el dato viene vacío, se deriva del título del hero
+const titleText = titleHtml.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+
+const sectionClasses = [
+  'HeroCTA',
+  `HeroCTA--${variant}`,
+  `HeroCTA--${mediaType}`,
+  `HeroCTA--x-${x}`,
+  `HeroCTA--y-${y}`,
+  '',
+  ...(imageStyle ? [`HeroCTA--${imageStyle}`] : []),
+  ...(marqueeText ? ['HeroCTA--marquee'] : []),
+  ...(introAnimation ? ['HeroCTA--intro-animation'] : []),
+].join(' ');
+
+const gOptions = JSON.stringify({ introAnimation, countdownDate: '' });
+const videoOptions = JSON.stringify({
+  desktopRatio: 'widescreen',
+  portraitRatio: 'unknown',
+  plyr: false,
+  defer: false,
+  playInViewport: true,
+});
+const marqueeOptions = JSON.stringify({ someOption: 'value', transition: 'grow' });
+const marqueeItems = marqueeText ? Array.from({ length: 17 }, () => marqueeText) : [];
+---
+
+<section
+  class={sectionClasses}
+  g-component="HeroCTA"
+  g-options={gOptions}
+  style={introAnimation ? 'opacity: 0' : undefined}
+>
+  {introAnimation && <div class="HeroCTA__intro-circle" g-ref="introCircle"></div>}
+
+  <div class="HeroCTA__inner tm">
+    <div class="HeroCTA__media">
+      {mediaType === 'video' && video && (
+        <section
+          class="Video  c-Video-landscape-ratio-widescreen"
+          g-component="Video"
+          g-options={videoOptions}
+        >
+          <video
+            playsinline
+            muted
+            loop
+            autoplay
+            width="100%"
+            height="100%"
+            crossorigin=""
+            poster={video.poster}
+            g-ref="landscapeVideo"
+          >
+            <source g-ref="landscapeBackupSource" src={video.mp4} type="video/mp4" />
+          </video>
+        </section>
+      )}
+      {mediaType === 'image' && image && (
+        <img
+          src={image.src}
+          width={image.width}
+          height={image.height}
+          alt={image.alt || titleText}
+          class={image.class}
+        />
+      )}
+      {mediaType === 'image' && picture && (
+        <picture class="">
+          {picture.sources.map((source) => (
+            <source media={source.media} srcset={source.srcset} />
+          ))}
+          <img src={picture.src} alt={picture.alt || titleText} loading="lazy" />
+        </picture>
+      )}
+    </div>
+    <div class="HeroCTA__content" g-ref="animElem">
+      {titleHtml && <TitleTag class="HeroCTA__title"><Fragment set:html={titleHtml} /></TitleTag>}
+      <div class="HeroCTA__banner_logo">
+        {bannerLogo && <img src={bannerLogo.src} alt={bannerLogo.alt ?? 'Banner Logo'} />}
+        {button && (
+          <a href={button.href} class="button">{button.label}</a>
+        )}
+      </div>
+    </div>
+  </div>
+
+  {marqueeText && (
+    <div class="Marquee Marquee--bar " g-component="Marquee" g-options={marqueeOptions}>
+      <div class="Marquee__content">
+        {marqueeItems.map((text) => (
+          <div class="Marquee__text"><p>{text}</p></div>
+        ))}
+      </div>
+      <div aria-hidden="true" class="Marquee__content">
+        {marqueeItems.map((text) => (
+          <div class="Marquee__text"><p>{text}</p></div>
+        ))}
+      </div>
+    </div>
+  )}
+</section>

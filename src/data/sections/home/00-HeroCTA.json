@@ -1,0 +1,21 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "video",
+    "x": "center",
+    "y": "center",
+    "imageStyle": "image-fullscreen",
+    "introAnimation": true,
+    "marqueeText": "Limited beds and tickets available BOOK TODAY",
+    "video": {
+      "mp4": "/media/videos/vimeo-850210954-540p.mp4",
+      "poster": "/media/videos/posters/poster-1704537394.jpg"
+    },
+    "titleHtml": "The Ultimate Day Club Experience",
+    "button": {
+      "href": "/events-calendar/",
+      "label": "Book Now"
+    }
+  }
+}

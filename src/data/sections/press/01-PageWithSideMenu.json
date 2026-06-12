@@ -1,0 +1,35 @@
+{
+  "type": "PageWithSideMenu",
+  "props": {
+    "menuTitle": "Support",
+    "menuId": "menu-support-side-menu",
+    "menuItems": [
+      {
+        "id": "menu-item-612506",
+        "classes": "menu-item menu-item-type-post_type menu-item-object-page menu-item-612506",
+        "href": "/faqs/",
+        "label": "FAQs"
+      },
+      {
+        "id": "menu-item-612507",
+        "classes": "menu-item menu-item-type-post_type menu-item-object-page menu-item-612507",
+        "href": "/terms-conditions/",
+        "label": "Terms & Conditions"
+      },
+      {
+        "id": "menu-item-612508",
+        "classes": "menu-item menu-item-type-post_type menu-item-object-page menu-item-612508",
+        "href": "/privacy-policy/",
+        "label": "Privacy Policy"
+      },
+      {
+        "id": "menu-item-612509",
+        "classes": "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-177368 current_page_item menu-item-612509",
+        "href": "/press/",
+        "label": "Press",
+        "current": true
+      }
+    ],
+    "html": "<h3>Media &amp; Materials</h3>\n<p>If you’d like to request images, information and all things media you can please contact <a href=\"mailto:maria@kitandkaboodleagency.com\">maria@kitandkaboodleagency.com</a>.</p>\n<h3>Photo Shoots</h3>\n<p>If you’re looking to schedule a photo shoot at O Beach Ibiza, please email us at <a href=\"mailto:maria@kitandkaboodleagency.com\">maria@kitandkaboodleagency.com</a>&nbsp;with as many details as possible. If we’re able to accommodate you, we’ll reply touch within 48 hours</p>\n<h3>Collaborations</h3>\n<p>If you’re a journalist, editor, influencer, or willing to do a collaboration with us please email us at <a href=\"maria@kitandkaboodleagency.com\">maria@kitandkaboodleagency.com</a></p>\n<h3>Influencer Requests</h3>\n<p>O Beach Ibiza is happy to offer hospitality to influencers depending on availability. If you´d like to highlight O Beach Ibiza on your social media channels please email us at <a href=\"mailto:maria@kitandkaboodleagency.com\">maria@kitandkaboodleagency.com</a>&nbsp;to start the conversation.</p>\n\n\n<p></p>"
+  }
+}

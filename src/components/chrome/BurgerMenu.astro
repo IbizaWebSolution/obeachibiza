@@ -1,0 +1,109 @@
+---
+// Menú lateral (burger) — réplica del BurgerMenu del tema original.
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { useTranslations, localePath } from '../../i18n/ui';
+
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
+const l = (path: string) => localePath(locale, path);
+
+const menu1 = [
+  { href: l('/day-club/'), label: t('dayClub') },
+  { href: l('/drinks-packages/'), label: t('packages') },
+  { href: l('/celebration-packages/'), label: t('celebrationPackages') },
+  { href: l('/bed-menus/'), label: t('bedMenus') },
+];
+const menu2 = [
+  { href: l('/events-calendar/'), label: t('bookNow') },
+  { href: l('/restaurant-calendar/'), label: t('restaurant') },
+  { href: l('/bonito-hotel/'), label: t('hotel') },
+  { href: 'https://obeachdubai.com/?utm_source=obd-website&utm_medium=referral&utm_campaign=always-on', label: t('dubai') },
+  { href: 'https://obeachmusic.com/?utm_source=obm-website&utm_medium=referral&utm_campaign=always-on', label: t('music') },
+  { href: l('/inner-circle/'), label: t('membership') },
+  { href: 'https://store.obeachibiza.com/', label: t('merchandise') },
+  { href: 'https://www.thejockeyclub.co.uk/epsom-derby/o-beach/?utm_source=obeach&utm_medium=email&utm_campaign=Derby', label: t('epsomRaces') },
+];
+const connect = [
+  { href: 'https://www.instagram.com/obeachibiza/', label: 'Instagram' },
+  { href: 'https://www.facebook.com/obeachibiza', label: 'Facebook' },
+  { href: 'https://twitter.com/OBeachIbiza', label: 'Twitter' },
+  { href: 'https://www.youtube.com/user/Oceanbeachibiza', label: 'Youtube' },
+  { href: 'https://soundcloud.com/obeachibiza', label: 'Soundcloud' },
+  { href: 'https://www.pinterest.co.uk/obeachibiza/', label: 'Pinterest' },
+  { href: 'https://open.spotify.com/user/8lwr7qlctw9u7oqrl0dvasjxp', label: 'Spotify' },
+];
+const about = [
+  { href: l('/events-calendar/'), label: t('eventsCalendar') },
+  { href: l('/partners/'), label: t('partners') },
+  { href: l('/open-positions/'), label: t('workWithUs') },
+  { href: '#', label: t('accountLogin') },
+  { href: l('/contact-us/'), label: t('contactUs') },
+];
+---
+
+<section class="BurgerMenu " g-component="BurgerMenu" g-options="null" style="opacity: 0;">
+  <div class="BurgerMenu__reveal" g-ref="reveal"></div>
+  <div class="BurgerMenu__inner" g-ref="inner">
+    <button class="BurgerMenu__close" g-ref="closeBtn">{t('close')}</button>
+    <div class="BurgerMenu__main-menus">
+      <nav class="BurgerMenu__main-menu BurgerMenu__main-menu--1" g-ref="staggerIn">
+        <ul class="BurgerMenu__main-menu__menu">
+          {menu1.map((item) => (
+            <li class="BurgerMenu__main-menu__menu__item">
+              <a href={item.href} class="BurgerMenu__main-menu__menu__item__link">{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav class="BurgerMenu__main-menu BurgerMenu__main-menu--2" g-ref="staggerIn">
+        <ul class="BurgerMenu__main-menu__menu">
+          {menu2.map((item) => (
+            <li class="BurgerMenu__main-menu__menu__item">
+              <a
+                href={item.href}
+                target={/^https?:\/\//.test(item.href) ? '_blank' : undefined}
+                rel={/^https?:\/\//.test(item.href) ? 'noopener' : undefined}
+                class="BurgerMenu__main-menu__menu__item__link"
+              >{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+    <div class="BurgerMenu__sub-menus" g-ref="staggerIn">
+      <nav class="BurgerMenu__sub-menu BurgerMenu__sub-menu--connect" g-ref="staggerIn">
+        <h3 class="BurgerMenu__sub-menu__title">{t('connect')}</h3>
+        <ul class="BurgerMenu__sub-menu__menu">
+          {connect.map((item) => (
+            <li class="BurgerMenu__sub-menu__menu__item">
+              <a href={item.href} target="_blank" rel="noopener" class="BurgerMenu__sub-menu__menu__item__link">{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav class="BurgerMenu__sub-menu BurgerMenu__sub-menu--about" g-ref="staggerIn">
+        <h3 class="BurgerMenu__sub-menu__title">{t('aboutUs')}</h3>
+        <ul class="BurgerMenu__sub-menu__menu">
+          {about.map((item) => (
+            <li class="BurgerMenu__sub-menu__menu__item">
+              <a href={item.href} class="BurgerMenu__sub-menu__menu__item__link">{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div class="BurgerMenu__lang" g-ref="staggerIn">
+        <LanguageSwitcher modifier="LanguageSwitcher--burger" />
+      </div>
+    </div>
+    <div class="BurgerMenu__cta" g-ref="staggerIn">
+      <aside class="BurgerMenuCTA " g-component="BurgerMenuCTA" g-options="null">
+        <a href={l('/blog')} class="BurgerMenuCTA__link" title="" target="">
+          <div class="[ BurgerMenuCTA__image ] intrinsic-image" style="--six-intrinsic-ratio: 1620/462; --six-intrinsic-fallback: 28.518518518519%">
+            <img src="/media/2023/08/Rectangle-9688-aspect-ratio-7-2-1.webp" width="1620" height="462" alt="" loading="lazy" />
+          </div>
+          <h3 class="BurgerMenuCTA__text">{t('discoverBlogBurger')}</h3>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "video",
+    "x": "center",
+    "y": "center",
+    "imageStyle": "image-fullscreen",
+    "video": {
+      "mp4": "/media/videos/vimeo-1058235240-540p.mp4",
+      "poster": "/media/videos/posters/poster-1984350531.jpg"
+    },
+    "titleHtml": "",
+    "bannerLogo": {
+      "src": "/media/2025/02/BONITO_Obeach_Logo_Positive_Orange-copy.webp",
+      "alt": "Banner Logo"
+    },
+    "button": {
+      "href": "#",
+      "label": "Book Now"
+    }
+  }
+}

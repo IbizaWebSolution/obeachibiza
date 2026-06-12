@@ -1,0 +1,59 @@
+---
+import SimpleCard from './SimpleCard.astro';
+
+interface CardImage {
+  style: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+interface PulloutLink {
+  title: string;
+  url: string;
+  target: string;
+}
+
+interface PulloutContent {
+  images: number[] | false;
+  title: string;
+  description: string;
+  above_link_text: string;
+  link: PulloutLink | null;
+}
+
+interface CardOptions {
+  clickToOpenPullout: boolean;
+  pulloutContent: PulloutContent;
+  pulloutPanelClass: string;
+}
+
+interface Card {
+  modifiers?: string;
+  href: string;
+  cursorText?: string;
+  options: CardOptions;
+  image?: CardImage | null;
+  titleHtml: string;
+}
+
+interface Props {
+  title?: string;
+  cards: Card[];
+}
+
+const { title, cards } = Astro.props;
+---
+
+<section class="CTAs " g-component="CTAs" g-options="[]">
+
+	{title && <h2 class="CTAs__title">{title}</h2>}
+
+	<div class="CTAs__inner">
+		{cards.map((card) => (
+			<SimpleCard {...card} />
+		))}
+	</div>
+
+</section>

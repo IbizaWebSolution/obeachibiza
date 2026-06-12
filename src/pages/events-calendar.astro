@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import EventsCalendarPage from '../components/EventsCalendarPage.astro';
+import meta from '../data/pages-meta.json';
+import page00 from '../data/sections/events-calendar/00-EventsCalendarPage.json';
+
+const m = meta['events-calendar'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <EventsCalendarPage {...page00.props} />
+</Base>

@@ -1,0 +1,25 @@
+---
+interface Props {
+	/** Modificador BEM: "TextAndLink--half-margin" | "TextAndLink--no-margin" | ... */
+	modifier?: string;
+	/** HTML enriquecido del bloque de texto (incluye los h2/h4 del original) */
+	html: string;
+	linkText?: string;
+	linkHref?: string;
+	linkTarget?: string;
+}
+
+const { modifier = '', html, linkText, linkHref, linkTarget = '' } = Astro.props;
+---
+
+<section class={`TextAndLink  ${modifier}`} g-component="TextAndLink" g-options="null">
+
+	<div class="TextAndLink__text">
+		<Fragment set:html={html} />
+	</div>
+
+	{linkText && (
+		<a href={linkHref} target={linkTarget} class="TextAndLink__link">{linkText}</a>
+	)}
+
+</section>

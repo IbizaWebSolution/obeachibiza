@@ -1,0 +1,44 @@
+---
+export interface SideMenuItem {
+  /** Atributo id del <li> original, p. ej. "menu-item-612506" */
+  id: string;
+  /** Atributo class del <li> original, copiado literal (incluye current-menu-item / page-item-N cuando procede) */
+  classes: string;
+  /** Enlace ya localizado, p. ej. "/terms-conditions/" */
+  href: string;
+  /** Texto del enlace */
+  label: string;
+  /** true en la página actual: añade aria-current="page" */
+  current?: boolean;
+}
+
+interface Props {
+  /** Título del menú lateral, p. ej. "Support" */
+  menuTitle: string;
+  /** Atributo id del <ul>, p. ej. "menu-support-side-menu" */
+  menuId: string;
+  menuItems: SideMenuItem[];
+  /** Cuerpo de la página (HTML enriquecido) */
+  html: string;
+}
+
+const { menuTitle, menuId, menuItems, html } = Astro.props;
+---
+
+<section class="PageWithSideMenu " g-component="PageWithSideMenu" g-options="null">
+	<nav class="PageWithSideMenu__menu">
+		<header class="PageWithSideMenu__menu__header">
+			<h3>{menuTitle}</h3>
+		</header>
+		<ul id={menuId} class="menu">
+			{menuItems.map((item) => (
+				<li id={item.id} class={item.classes}>
+					<a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+	<div class="PageWithSideMenu__content">
+		<Fragment set:html={html} />
+	</div>
+</section>

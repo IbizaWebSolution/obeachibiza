@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import ContactContent from '../components/pages/ContactContent.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/contact-us/00-HeroCTA.json';
+
+const m = meta['contact-us'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <HeroCTA {...hero00.props} />
+  <ContactContent />
+</Base>

@@ -1,0 +1,27 @@
+---
+// Contact Us - datos de contacto + mapa de ubicación.
+// El iframe de Google Maps se sustituye por el placeholder "Próximamente".
+// Ver INTEGRACIONES-EXTERNAS.md (es un embed gratuito, fácil de reponer).
+import ComingSoon from '../ComingSoon.astro';
+
+const introHtml = `
+<p>If you need to get in touch with a member of the team please use the details in the footer.</p>
+<p class="is-style-button"><a href="#footer">View Contact Details</a></p>
+`;
+---
+<div class="content-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <Fragment set:html={introHtml} />
+      </div>
+      <div class="col-md-6">
+        <ComingSoon
+          title="Mapa de ubicación"
+          text="Muy pronto verás aquí el mapa con cómo llegar a O Beach Ibiza, en 12-14 Carrer Des Moli, San Antonio."
+          minHeight="450px"
+        />
+      </div>
+    </div>
+  </div>
+</div>

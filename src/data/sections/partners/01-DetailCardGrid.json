@@ -1,0 +1,95 @@
+{
+  "type": "DetailCardGrid",
+  "props": {
+    "heading": "Our Partners",
+    "cols": 3,
+    "cards": [
+      {
+        "image": {
+          "src": "/media/2023/08/Copy-of-DSCF4343-2.webp",
+          "width": 584,
+          "height": 584,
+          "alt": "",
+          "ratio": "584/584",
+          "fallback": "100%"
+        },
+        "title": "Bam-Bu-Ku",
+        "link": { "href": "/events-calendar/", "label": "Book Now", "target": "" },
+        "subtitleHtml": "<p>You will have already heard about our little sister beach club, bar and restaurant located next door to O Beach.</p>",
+        "contentTitle": "Exclusive Offer",
+        "contentHtml": "<p>Get 10% off your bed call or email us and quote your O Beach Ibiza booking reference to redeem</p>"
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/Snapinsta.app_344415202_1489992071809040_5724242083287748828_n_1024.webp",
+          "width": 584,
+          "height": 584,
+          "alt": "",
+          "ratio": "584/584",
+          "fallback": "100%"
+        },
+        "title": "The Skinny Kitchen",
+        "link": { "href": "/events-calendar/", "label": "Book Now", "target": "" },
+        "subtitleHtml": "<p>Following the debut of the skinny kitchen’s new ibiza town location last year, plus the terrace extension at the original san Antonio restaurant, your favourite healthy food hangout is waiting for you.</p>",
+        "contentTitle": "Exclusive Offer",
+        "contentHtml": "<p>Detox and Retox at the same time with 20% of your final bill at either Ibiza Restaurant between 5pm and 11pm or enjoy 2 for 1 on cocktails between 7pm and 10pm.</p>"
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/272114959_228173332844979_8299044922615694958_n.webp",
+          "width": 584,
+          "height": 584,
+          "alt": "",
+          "ratio": "584/584",
+          "fallback": "100%"
+        },
+        "title": "Wi-Ki-Woo",
+        "subtitleHtml": "<p>Have you visited ibiza’s most instagrammable hotel yet? Book an unforgettable stay, dine on their sunset terrace or indulge in one of their famous hangover breakfasts, all with sea views.</p>",
+        "contentTitle": "Exclusive Offer",
+        "contentHtml": "<p>Wi-ki are offering you a complimentary cocktail of the day when you order a main meal at the terrace restaurant between 5pm – 8pm.</p>"
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/Snapinsta.app_337156474_939246634184565_5631069065827122712_n_1024.webp",
+          "width": 584,
+          "height": 584,
+          "alt": "",
+          "ratio": "584/584",
+          "fallback": "100%"
+        },
+        "title": "Okasan",
+        "subtitleHtml": "<p>Enjoy an intimate Japanese dining experience with sushi, robata, meat, seafood and cocktails, with sunset views at San Antonio’s harbour.</p>",
+        "contentTitle": "Exclusive Offer",
+        "contentHtml": "<p>We have got you 10% discount off your final bill.</p>"
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/331012746_163841783074658_1750527207091260100_n.webp",
+          "width": 584,
+          "height": 584,
+          "alt": "",
+          "ratio": "584/584",
+          "fallback": "100%"
+        },
+        "title": "Itaca Ibiza",
+        "subtitleHtml": "<p>Where we have unbeatable views and a vibrant atmosphere.</p>",
+        "contentTitle": "Exclusive Offer",
+        "contentHtml": "<p>From 11am to 5am, we are the hotspot of San Antonio. 2 for 1 on drinks (local beers and spirits)</p>"
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/337544186_947404866616776_7264137279823163456_n.webp",
+          "width": 584,
+          "height": 584,
+          "alt": "",
+          "ratio": "584/584",
+          "fallback": "100%"
+        },
+        "title": "Chi Kee Wun",
+        "subtitleHtml": "<p>Discover Ibiza’s Chinese fusion dining experience with an inspired menu of traditional eastern flavours fused with contemporary touches all set within a stunning oriental garden in San Antonio this summer!</p>",
+        "contentTitle": "Exclusive Offer",
+        "contentHtml": "<p>We have got you 10% discount off your final bill.</p>"
+      }
+    ]
+  }
+}

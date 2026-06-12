@@ -1,0 +1,55 @@
+---
+// Paneles laterales (pullouts): eventos y CTAs de tarjetas.
+// En la demo se abren/cierran con JS vanilla y se rellenan desde los
+// g-options de las tarjetas; las acciones de reserva no están implementadas.
+---
+
+<section class="SlideOut  js-event-panel SlideOut--in-left" g-component="SlideOut" g-options='{"direction":"left","effect":"overlay","initiatorClass":"js-event-panel"}'>
+  <div class="[ SlideOut__content ]">
+    <button class="[ SlideOut__close ]" g-ref="closeBtn">Close</button>
+    <div g-ref="content">
+      <section class="EventPullout " g-component="EventPullout" g-options="null">
+        <div class="[ EventPullout__image is-hidden ]" g-ref="image"></div>
+        <h2 class="[ EventPullout__title is-hidden ]" g-ref="title"></h2>
+        <div class="[ EventPullout__info ]">
+          <div class="[ EventPullout__info__item EventPullout__info__item--date is-hidden ]" g-ref="dateContainer">
+            <h3 class="[ EventPullout__info__item__title ]">Date</h3>
+            <time g-ref="date"></time>
+          </div>
+          <div class="[ EventPullout__info__item EventPullout__info__item--ticket is-loading ]" g-ref="ticketContainer">
+            <h3 class="[ EventPullout__info__item__title ]">Ticket Price</h3>
+            <span class="EventPullout__info__item__loader"></span>
+            <p g-ref="ticketPrice"></p>
+          </div>
+          <div class="[ EventPullout__info__item EventPullout__info__item--description EventPullout__info__item--full is-hidden ]" g-ref="descriptionContainer">
+            <h3 class="[ EventPullout__info__item__title ]">Description</h3>
+            <div g-ref="description"></div>
+          </div>
+          <div class="[ EventPullout__info__item EventPullout__info__item--spotify EventPullout__info__item--full is-hidden ]" g-ref="spotify"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <nav class="[ SlideOut__book-links ]" g-ref="bookLinks"></nav>
+</section>
+
+<section class="SlideOut  js-cta-panel SlideOut--in-left" g-component="SlideOut" g-options='{"direction":"left","effect":"overlay","initiatorClass":"js-cta-panel"}'>
+  <div class="[ SlideOut__content ]">
+    <button class="[ SlideOut__close ]" g-ref="closeBtn">Close</button>
+    <div g-ref="content">
+      <section class="[ CTAPullout ]" g-component="CTAPullout">
+        <div class="[ CTAPullout__inner ]">
+          <header class="[ CTAPullout__header ]">
+            <div class="[ CTAPullout__images ]" g-ref="images"></div>
+            <h2 class="[ CTAPullout__title ]" g-ref="title"></h2>
+          </header>
+          <div class="[ CTAPullout__content ]">
+            <h3>Description</h3>
+            <div class="[ CTAPullout__description ]" g-ref="description"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <nav class="[ SlideOut__book-links ]" g-ref="bookLinks"></nav>
+</section>

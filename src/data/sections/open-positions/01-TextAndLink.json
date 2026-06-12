@@ -1,0 +1,10 @@
+{
+  "type": "TextAndLink",
+  "props": {
+    "modifier": "TextAndLink--no-margin",
+    "html": "<h4>O Beach Ibiza is leading the way in the world of daytime parties, fuelled by love, music and a little bit of Ibiza magic. Behind every facet of the ultimate day club experience is an incredibly hard-working team, and we couldn’t do what we do without all members of the O Beach Ibiza family.</h4>\n<h4>We offer jobs in Ibiza to those who push the ordinary aside for the extraordinary. Our workplace is a melting pot of different cultures, offering you the chance to grow personally and professionally. We take our work seriously, but not ourselves, and welcome applications from all walks of life.</h4>",
+    "linkText": "Current Job Positions ",
+    "linkHref": "#open-positions",
+    "linkTarget": "_blank"
+  }
+}

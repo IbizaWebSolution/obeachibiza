@@ -1,0 +1,24 @@
+---
+// Versiones localizadas (/es, /it, /fr, /de) de todas las páginas de nivel
+// superior: reutilizan el componente de página original; el chrome (header,
+// burger, footer) se traduce vía Astro.currentLocale y el contenido editorial
+// permanece en inglés.
+const pageModules = import.meta.glob<{ default: any }>('../*.astro', { eager: true });
+
+export function getStaticPaths() {
+  const langs = ['es', 'it', 'fr', 'de'];
+  const slugs = Object.keys(import.meta.glob('../*.astro')).map((p) =>
+    p.replace('../', '').replace('.astro', '')
+  );
+  return langs.flatMap((lang) =>
+    slugs.map((slug) => ({
+      params: { lang, slug: slug === 'index' ? undefined : slug },
+    }))
+  );
+}
+
+const { slug } = Astro.params;
+const Page = pageModules[`../${slug ?? 'index'}.astro`].default;
+---
+
+<Page />

@@ -1,0 +1,16 @@
+---
+// Day Club - contenido custom fuera de los g-component (article#post-59 de /day-club/).
+// OJO: el wrapper article.post > div.grid > div.container envuelve TAMBIEN los g-component
+// extraidos (01-CardsRow, 02-Marquee, 03-CTAs, 04-CardsRow): insertarlos en el <slot /> en ese orden.
+const intro = `<h2 class="wp-block-heading">Our seafront venue offers areas and seating to suit every Ibiza lover. Enjoy a memorable day until the sun sets and the stars come out to play. Whatever you choose, you’ll have front row views to the pool, the sunset or the incredible fully immersible entertainment shows.</h2>`;
+const outro = `<p>Elevate your Ibiza party experience by pre-booking one of our packages.<br>All table and bed bookings are subject to a minimum spend. This can be redeemed against food and drink of your choice including pre-selected drinks packages.<br>Looking to celebrate? Let us put the ‘special’ in your ‘occasion’ with a celebration package.</p>`;
+---
+<article class="post" id="post-59">
+	<div class="grid">
+		<div class="container">
+			<Fragment set:html={intro} />
+			<slot />
+			<Fragment set:html={outro} />
+		</div>
+	</div>
+</article>

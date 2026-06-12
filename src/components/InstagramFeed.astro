@@ -1,0 +1,31 @@
+---
+// Feed de Instagram. En el sitio original lo carga el plugin Smash Balloon
+// (API de Instagram, por AJAX). En la demo, la zona del grid se sustituye por
+// el placeholder "Próximamente". Ver INTEGRACIONES-EXTERNAS.md.
+import ComingSoon from './ComingSoon.astro';
+
+interface Props {
+  /** Título del header, p. ej. "Be Social" */
+  title: string;
+  /** Enlace al perfil de Instagram (se conserva absoluto) */
+  followHref: string;
+  followLabel: string;
+}
+
+const { title, followHref, followLabel } = Astro.props;
+---
+
+<section class="InstagramFeed " g-component="InstagramFeed" g-options="null">
+  <header class="InstagramFeed__header">
+    <h2 class="InstagramFeed__header__title">{title}</h2>
+    <a href={followHref} class="InstagramFeed__footer__link">{followLabel}</a>
+  </header>
+
+  <div id="sb_instagram" class="sbi sbi_width_resp">
+    <ComingSoon
+      title="Nuestro feed de Instagram"
+      text="Muy pronto verás aquí las últimas publicaciones de @obeachibiza en directo."
+      minHeight="360px"
+    />
+  </div>
+</section>

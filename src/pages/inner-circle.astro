@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import InnerCircleSections from '../components/pages/InnerCircleSections.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/inner-circle/00-HeroCTA.json';
+
+const m = meta['inner-circle'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <h1 class="visually-hidden">Inner Circle</h1>
+  <HeroCTA {...hero00.props} />
+  <InnerCircleSections />
+</Base>

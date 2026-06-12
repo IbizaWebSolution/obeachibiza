@@ -1,0 +1,64 @@
+---
+interface IntrinsicImage {
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  ratio: string;
+  fallback: string;
+}
+
+interface Props {
+  options?: Record<string, unknown> | null;
+  image?: IntrinsicImage;
+  label?: string;
+  title?: string;
+  description?: string;
+  credit?: string;
+}
+
+const { options = null, image, label, title, description, credit } = Astro.props;
+---
+
+<div class="Slide " g-component="Slide" g-options={JSON.stringify(options)}>
+	<div class="Slide__left">
+		{image && (
+			<div class="Slide__image">
+				<div
+					class=" intrinsic-image"
+					style={`--six-intrinsic-ratio: ${image.ratio}; --six-intrinsic-fallback: ${image.fallback}`}
+				>
+					<img
+						src={image.src}
+						width={image.width}
+						height={image.height}
+						alt={image.alt ?? ''}
+						loading="lazy"
+					/>
+				</div>
+			</div>
+		)}
+	</div>
+	<div class="Slide__right">
+		{label && (
+			<div class="Slide__label">
+				{label}
+			</div>
+		)}
+		{title && (
+			<h4 class="Slide__title">
+				{title}
+			</h4>
+		)}
+		{description && (
+			<p class="Slide__description">
+				{description}
+			</p>
+		)}
+		{credit && (
+			<h5 class="Slide__credit">
+				{credit}
+			</h5>
+		)}
+	</div>
+</div>

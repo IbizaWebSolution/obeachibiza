@@ -1,0 +1,87 @@
+{
+  "bed-menus": {
+    "title": "Bed Menus - O Beach Ibiza",
+    "description": "Settle into the ultimate day-to-night experience at O Beach Ibiza. Explore our bed food and drinks menus: incredible dishes, poolside bites and vibrant cocktails.",
+    "bodyClass": "page-template page-template-template-drinks page-template-template-drinks-php page page-id-760404 not-admin gasp-loading six-page-bed-menus has-blocks hero-in-view"
+  },
+  "blog": {
+    "title": "Blog - O Beach Ibiza",
+    "description": "The O Beach Ibiza blog: island happenings, party guides, music and everything you need to plan your perfect Ibiza day club experience.",
+    "bodyClass": "blog not-admin gasp-loading six-page-blog has-blocks hero-in-view"
+  },
+  "bonito-hotel": {
+    "title": "Bonito Hotel - O Beach Ibiza",
+    "description": "San Antonio's newest premium hotel, Live the Bonito, situated across the road from O Beach Ibiza. Features two pool areas, a spa, and a gym.",
+    "bodyClass": "page-template page-template-template-landing-page page-template-template-landing-page-php page page-id-758855 not-admin gasp-loading six-page-bonito-hotel hero-in-view"
+  },
+  "celebration-packages": {
+    "title": "Celebration Packages - O Beach Ibiza",
+    "description": "Celebrate in style at O Beach Ibiza. Birthdays, hen parties and special occasions with bespoke celebration packages at the ultimate Ibiza day club.",
+    "bodyClass": "page-template page-template-template-celebration page-template-template-celebration-php page page-id-253399 not-admin gasp-loading six-page-celebration-packages has-blocks hero-in-view"
+  },
+  "contact-us": {
+    "title": "Contact us - O Beach Ibiza",
+    "description": "If you need to get in touch with a member of the team please use the details in the footer. View Contact Details",
+    "bodyClass": "page-template-default page page-id-12 not-admin gasp-loading six-page-contact-us has-blocks hero-in-view"
+  },
+  "day-club": {
+    "title": "Day Club - O Beach Ibiza",
+    "description": "Our seafront venue offers areas and seating to suit every Ibiza lover. Enjoy a memorable day until the sun sets and the stars come out to play. Whatever you choose, you’ll have front row views to the pool, the sunset or the incredible fully immersible entertainment shows. Elevate your Ibiza party experience by pre-booking one",
+    "bodyClass": "page-template-default page page-id-59 not-admin gasp-loading six-page-day-club has-blocks hero-in-view"
+  },
+  "drinks-packages": {
+    "title": "Drinks Packages - O Beach Ibiza",
+    "description": "Pre-book your drinks packages at O Beach Ibiza and make the most of your pool bed: champagne, spirits, cocktails and more delivered to your spot in the sun.",
+    "bodyClass": "page-template page-template-template-drinks page-template-template-drinks-php page page-id-21662 not-admin gasp-loading six-page-drinks-packages has-blocks hero-in-view"
+  },
+  "events-calendar": {
+    "title": "Calendar - O Beach Ibiza",
+    "description": "O Beach Ibiza events calendar featuring Ibiza pool parties, DJ line-ups, and day club events. Discover upcoming O Beach Ibiza events and plan your visit to Ibiza for 2026!",
+    "bodyClass": "page-template page-template-template-events-calendar page-template-template-events-calendar-php page page-id-143 not-admin gasp-loading six-page-events-calendar has-blocks hero-in-view"
+  },
+  "faqs": {
+    "title": "FAQs - O Beach Ibiza",
+    "description": "Frequently asked questions about O Beach Ibiza: bookings, minimum spends, dress code, opening times, payments and everything to plan your visit.",
+    "bodyClass": "page-template page-template-template-faq page-template-template-faq-php page page-id-34 not-admin gasp-loading six-page-faqs has-blocks hero-in-view"
+  },
+  "home": {
+    "title": "O Beach Ibiza - O Beach Ibiza",
+    "description": "Daily parties Enjoy complete and immersive views of this Ibiza club and its captivating entertainment, either from an iconic round pool bed, the unifying dance floor or our Mediterranean fusion restaurant. We’re known as one of the best clubs in Ibiza for a reason. We didn’t invent the pool party, we just perfected it.",
+    "bodyClass": "home page-template page-template-template-site-location page-template-template-site-location-php page page-id-16 not-admin gasp-loading has-blocks hero-in-view"
+  },
+  "inner-circle": {
+    "title": "Inner Circle - O Beach Ibiza",
+    "description": "Join the O Beach Inner Circle membership and unlock exclusive benefits, priority bookings and rewards at Ibiza's ultimate day club.",
+    "bodyClass": "page-template page-template-template-elevate-landing page-template-template-elevate-landing-php page page-id-760928 not-admin gasp-loading six-page-inner-circle has-blocks hero-in-view"
+  },
+  "open-positions": {
+    "title": "Positions - O Beach Ibiza",
+    "description": "Jobs in Ibiza: join the O Beach Ibiza family. Browse current open positions and work at the world's leading day club.",
+    "bodyClass": "archive post-type-archive post-type-archive-positions not-admin gasp-loading six-page-open-positions hero-in-view"
+  },
+  "partners": {
+    "title": "Partners - O Beach Ibiza",
+    "description": "O Beach Ibiza offers a unique, lavish and fun lifestyle experience within a poolside environment enabling our customers to luxuriate in high-end service and incredible beautiful surroundings with a credible soundtrack and world class entertainment.",
+    "bodyClass": "page-template-default page page-id-612579 not-admin gasp-loading six-page-partners has-blocks hero-in-view"
+  },
+  "press": {
+    "title": "Press - O Beach Ibiza",
+    "description": "Media & Materials If you'd like to request images, information and all things media you can please contact maria@kitandkaboodleagency.com. Photo Shoots If you’re looking to schedule a photo shoot at O Beach Ibiza, please email us at maria@kitandkaboodleagency.com with as many details as possible. If we’re able to accommodate you, we’ll reply touch within 48 hours",
+    "bodyClass": "page-template page-template-template-page-with-side-menu page-template-template-page-with-side-menu-php page page-id-177368 not-admin gasp-loading six-page-press has-blocks hero-in-view"
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy - O Beach Ibiza",
+    "description": "Privacy Policy In compliance with the current legislation governing the protection of personal data, we would like to inform you that the personal data you supply to us by completing the electronic registration form on this page is collected in files controlled by Ice Mountain Ibiza S.L. and its group brands, including O Beach Ibiza,",
+    "bodyClass": "page-template page-template-template-page-with-side-menu page-template-template-page-with-side-menu-php page page-id-115292 not-admin gasp-loading six-page-privacy-policy hero-in-view"
+  },
+  "restaurant-calendar": {
+    "title": "Restaurant Calendar - O Beach Ibiza",
+    "description": "Our San Antonio restaurant brings tantalising flavours to your plate, with a signature menu of Mediterranean fusion cuisine. All restaurant bookings are subject to the ticket entry cost plus the minimum spend.",
+    "bodyClass": "page-template-default page page-id-405012 not-admin gasp-loading six-page-restaurant-calendar has-blocks hero-in-view"
+  },
+  "terms-conditions": {
+    "title": "Terms & Conditions - O Beach Ibiza",
+    "description": "THESE ‘TERMS & CONDITIONS’ MAY VARY FROM TIME TO TIME. PLEASE MAKE SURE YOU REVIEW THEM REGULARLY – CURRENT TERMS FROM NOVEMBER 2025. O Beach Ibiza is operated by Ice Mountain Ibiza SL, a Spanish company B57704124, registered at 12 – 14 Carrer Des Moli, San Antonio, Balears 07820 DOOR POLICY Anyone under the age",
+    "bodyClass": "page-template page-template-template-page-with-side-menu page-template-template-page-with-side-menu-php page page-id-54 not-admin gasp-loading six-page-terms-conditions hero-in-view"
+  }
+}

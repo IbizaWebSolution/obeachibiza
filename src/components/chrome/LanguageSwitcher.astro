@@ -1,0 +1,44 @@
+---
+// Selector de idioma con banderas. Replica el aspecto del LanguageSwitcher
+// original (Choices.js: píldora con borde, icono y chevron) sin dependencias:
+// botón que despliega una lista de enlaces a la página actual en cada idioma.
+import { locales, localeNames, defaultLocale, switchLocalePath, type Locale } from '../../i18n/ui';
+
+interface Props {
+  /** Modificador BEM extra, p. ej. "LanguageSwitcher--burger" */
+  modifier?: string;
+}
+
+const { modifier = '' } = Astro.props;
+
+const locale = ((Astro.currentLocale ?? defaultLocale) as Locale);
+const pathname = Astro.url.pathname;
+
+const options = locales.map((code) => ({
+  code,
+  label: localeNames[code],
+  href: switchLocalePath(pathname, code),
+  active: code === locale,
+}));
+---
+
+<nav class={`LanguageSwitcher ${modifier}`} g-component="LanguageSwitcher" g-options="null" aria-label="Language">
+  <div class="choices" data-type="select-one">
+    <button type="button" class="choices__inner LanguageSwitcher__toggle" g-ref="toggle" aria-haspopup="listbox" aria-expanded="false">
+      <img class="LanguageSwitcher__flag" src={`/img/flags/${locale}.svg`} alt="" width="20" height="14" />
+      <span class="choices__list--single">
+        <span class="choices__item">{localeNames[locale]}</span>
+      </span>
+    </button>
+    <ul class="choices__list LanguageSwitcher__dropdown" g-ref="dropdown" role="listbox" hidden>
+      {options.map((opt) => (
+        <li role="option" aria-selected={opt.active}>
+          <a class={`choices__item LanguageSwitcher__option${opt.active ? ' is-active' : ''}`} href={opt.href} hreflang={opt.code} lang={opt.code}>
+            <img class="LanguageSwitcher__flag" src={`/img/flags/${opt.code}.svg`} alt="" width="20" height="14" />
+            {opt.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

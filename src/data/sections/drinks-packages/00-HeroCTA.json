@@ -1,0 +1,18 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "image",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "featured-image",
+    "image": {
+      "src": "/media/2020/08/drinks-packages-hero.webp",
+      "width": 1920,
+      "height": 840,
+      "alt": "",
+      "class": "attachment-full size-full wp-post-image"
+    },
+    "titleHtml": "Drink Packages"
+  }
+}

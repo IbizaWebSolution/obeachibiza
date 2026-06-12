@@ -1,0 +1,118 @@
+---
+interface EventImage {
+  style: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+interface EventCard {
+  /** Enlaces de ticketing externo → "#" (la demo no implementa reservas) */
+  href: string;
+  cursorText?: string;
+  /** Objeto g-options original del Card */
+  options?: Record<string, unknown>;
+  image: EventImage;
+  /** Etiquetas del evento (día de la semana, género musical...) */
+  tags: string[];
+  label?: string;
+  title: string;
+  /** data-atributos extra del original (p. ej. data-event-id para abrir panel lateral) */
+  dataAttrs?: Record<string, string>;
+}
+
+interface Props {
+  title: string;
+  identifier: string;
+  viewAllHref?: string;
+  viewAllText?: string;
+  events: EventCard[];
+}
+
+const { title, identifier, viewAllHref, viewAllText = 'View All', events } = Astro.props;
+
+const carouselOptions = {
+  cellCount: events.length,
+  instagramStyleProgressBar: false,
+  carousel_if_greater_than: [],
+  cellAlign: 'left',
+  contain: true,
+  freeScroll: false,
+  lazyLoad: true,
+  fade: false,
+  autoPlay: false,
+  wrapAround: false,
+  cellSelector: '.EventsRow__cell',
+  pageDots: false,
+  groupCells: true,
+  prevNextButtons: false,
+  hash: false,
+  imagesLoaded: true,
+  setGallerySize: true,
+  draggable: true,
+  adaptiveHeight: false,
+  identifier,
+};
+
+const defaultCardOptions = { someOption: 'value', transition: 'grow' };
+---
+
+<section class="EventsRow " g-options="null" g-component="EventsRow" data-identifier={identifier}>
+	<header class="EventsRow__header">
+		<h3 class="EventsRow__title">{title}</h3>
+
+		<div class="EventsRow__header-right">
+
+		<nav class="EventsRow__carousel-nav is-start" g-ref="nav">
+			<ul class="EventsRow__carousel-nav-list">
+				<li class="EventsRow__carousel-nav-item">
+					<button class="EventsRow__carousel-nav-button" g-ref="prev">Prev</button>
+				</li>
+				<span class="EventsRow__carousel-nav-separator">&nbsp;/&nbsp;</span>
+				<li class="EventsRow__carousel-nav-item">
+					<button class="EventsRow__carousel-nav-button" g-ref="next">Next</button>
+				</li>
+			</ul>
+		</nav>
+		{viewAllHref && <a href={viewAllHref} class="button">{viewAllText}</a>}
+		</div>
+	</header>
+
+	<div class="EventsRow__inner">
+		<section class="Carousel " g-component="Carousel" g-options={JSON.stringify(carouselOptions)} data-identifier={identifier}>
+			{events.map((event) => (
+				<div class="EventsRow__cell">
+					<a
+						href={event.href}
+						class="Card "
+						g-component="Card"
+						g-options={JSON.stringify(event.options ?? defaultCardOptions)}
+						data-cursor-text={event.cursorText ?? 'VIEW'}
+						{...(event.dataAttrs ?? {})}
+					>
+						<div class="Card__image">
+							<div class=" intrinsic-image" style={event.image.style}>
+								<img src={event.image.src} width={event.image.width} height={event.image.height} alt={event.image.alt || event.title} loading="lazy" />
+							</div>
+
+							<div class="Card__tags">
+								{event.tags.map((tag) => (
+									<div class="Card__tag">
+										{tag}
+									</div>
+								))}
+							</div>
+						</div>
+						<div class="Card__label">
+							{event.label ?? ''}
+						</div>
+						<h4 class="Card__title">
+							{event.title}
+						</h4>
+					</a>
+				</div>
+			))}
+		</section>
+	</div>
+</section>

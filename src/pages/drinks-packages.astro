@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import DrinksIntro from '../components/pages/DrinksIntro.astro';
+import CardsRow from '../components/CardsRow.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/drinks-packages/00-HeroCTA.json';
+import cardsRow01 from '../data/sections/drinks-packages/01-CardsRow.json';
+
+const m = meta['drinks-packages'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  {/* titleTag h2: el h1 de la página lo aporta el hero del intro */}
+  <HeroCTA {...hero00.props} titleTag="h2" />
+  <DrinksIntro />
+  <article class="content-container more-padding no-margin">
+    <CardsRow {...cardsRow01.props} />
+  </article>
+</Base>

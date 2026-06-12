@@ -1,0 +1,30 @@
+---
+// Celebration Packages - hero antiguo + compra de paquetes.
+// El iframe de compra de CoverManager se sustituye por el placeholder
+// "Próximamente" (futuro sistema propio). Ver INTEGRACIONES-EXTERNAS.md.
+import ComingSoon from '../ComingSoon.astro';
+
+const heroHtml = `
+<div class="hero-container">
+	<div class="img-container">
+		<img src="/media/2020/01/Header-Celebration-Pacakge-Page.webp" class="full-width">
+
+		<div class="hero-title">
+			<h1>Celebration Packages</h1>
+		</div>
+
+	</div>
+</div>
+`;
+---
+<Fragment set:html={heroHtml} />
+
+<div class="grid">
+	<div class="container">
+		<ComingSoon
+			title="Compra de paquetes de celebración"
+			text="Muy pronto podrás reservar y pagar aquí tu paquete de cumpleaños, despedida o evento especial."
+			minHeight="480px"
+		/>
+	</div>
+</div>

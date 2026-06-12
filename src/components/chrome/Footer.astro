@@ -1,0 +1,171 @@
+---
+// Pie de página — réplica del Footer del tema original (con Newsletter en modo demo).
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { useTranslations, localePath, defaultLocale } from '../../i18n/ui';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = useTranslations(locale);
+const l = (path: string) => localePath(locale, path);
+
+const socials = [
+  { href: 'https://www.instagram.com/obeachibiza/', icon: 'instagram', w: 25, h: 25 },
+  { href: 'https://www.facebook.com/obeachibiza', icon: 'facebook', w: 12, h: 25 },
+  { href: 'https://www.tiktok.com/@obeachibiza', icon: 'tiktok', w: 24, h: 27 },
+  { href: 'https://twitter.com/OBeachIbiza', icon: 'twitter', w: 24, h: 27 },
+  { href: 'https://www.youtube.com/user/Oceanbeachibiza', icon: 'youtube', w: 21, h: 27 },
+  { href: 'https://soundcloud.com/obeachibiza', icon: 'soundcloud', w: 38, h: 26 },
+  { href: 'https://www.pinterest.co.uk/obeachibiza/', icon: 'pinterest', w: 20, h: 27 },
+  { href: 'https://open.spotify.com/user/8lwr7qlctw9u7oqrl0dvasjxp', icon: 'spotify', w: 25, h: 27 },
+];
+const headlineInfo = [
+  { href: l('/events-calendar/'), label: t('eventsCalendar') },
+  { href: l('/partners/'), label: t('partners') },
+  { href: l('/open-positions/'), label: t('workWithUs') },
+  { href: '#', label: t('accountLogin') },
+  { href: l('/contact-us/'), label: t('contactUs') },
+];
+const supportingInfo = [
+  { href: '#', label: t('myAccount') },
+  { href: l('/faqs/'), label: t('faqs') },
+  { href: l('/press/'), label: t('press') },
+  { href: l('/terms-conditions/'), label: t('terms') },
+  { href: '/es/terminos-y-condiciones/', label: 'Términos y Condiciones' },
+  { href: l('/privacy-policy/'), label: t('privacy') },
+  { href: '#', label: t('internalInfo') },
+];
+---
+
+<footer class="Footer " g-component="Footer" g-options='{"someOption":"value","transition":"grow"}'>
+  <div class="Footer__top">
+    <a class="Footer__logo">
+      <img src="/img/logo.svg" alt="O Beach" />
+    </a>
+
+    <div class="Footer__cta">
+      {/* p.h1: misma tipografía que h1 sin duplicar el h1 semántico en cada página */}
+      <p class="Footer__cta__text h1">{t('footerCta')}</p>
+      <a class="Footer__cta__link Footer__button" href={l('/events-calendar/')}>{t('bookABed')}</a>
+    </div>
+
+    <div class="Footer__newsletter">
+      <section class="Newsletter " g-component="Newsletter" g-options='{"someOption":"value","transition":"grow"}'>
+        <div class="Newsletter__inner">
+          <h3 class="Newsletter__title">{t('subscribe')}</h3>
+          <form class="Newsletter__form" g-ref="form" data-demo>
+            <input type="email" name="ob_email" g-ref="email" placeholder={t('yourEmail')} />
+            <button type="submit">
+              <span class="Newsletter__btn-text">{t('subscribe')}</span>
+              <span class="Newsletter__loader"></span>
+            </button>
+          </form>
+          <p class="Newsletter__description">{t('newsletterDesc')}</p>
+          <p class="Newsletter__success-msg" g-ref="success">{t('newsletterOk')}</p>
+          <p class="Newsletter__error-msg" g-ref="error">{t('newsletterErr')}</p>
+        </div>
+      </section>
+    </div>
+
+    <ul class="Footer__icons">
+      {socials.map((s) => (
+        <li>
+          <a href={s.href} target="_blank" rel="noopener">
+            <img src={`/img/${s.icon}.svg`} alt={s.icon} width={s.w} height={s.h} />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="Footer__bottom">
+    <div class="Footer__left">
+      <a id="footer"></a>
+      <div class="Footer__cols">
+        <div class="Footer__col">
+          <h6 class="Footer__col__title">{t('locationTitle')}</h6>
+          <ul class="Footer__col__list">
+            <li>12-14 Carrer Des Moli</li>
+            <li>San Antonio, 07820 Ibiza</li>
+            <li>Illes Balears</li>
+            <li></li>
+            <li>
+              <a href="https://www.google.com/maps/place/O+Beach+Ibiza/@38.9718486,1.3044008,17z/data=!3m1!4b1!4m6!3m5!1s0x129949e7755e4263:0x2cf11014f1e5a55!8m2!3d38.9718486!4d1.3065895!16s%2Fg%2F11h1r0546" target="_blank" rel="noopener">{t('viewMap')}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Footer__col">
+          <h6 class="Footer__col__title">{t('headlineInfo')}</h6>
+          <ul class="Footer__col__list">
+            {headlineInfo.map((item) => (
+              <li class="">
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="Footer__col">
+          <h6 class="Footer__col__title">{t('supportingInfo')}</h6>
+          <ul class="Footer__col__list">
+            {supportingInfo.map((item) => (
+              <li class="">
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="Footer__col">
+          <h6 class="Footer__col__title">{t('enquiriesTitle')}</h6>
+          <ul class="Footer__col__list">
+            <li class="">
+              <a href="mailto:reservations@obeachibiza.com?subject=O%20Beach%20Ibiza%20enquiry">reservations@obeachibiza.com</a>
+            </li>
+            <li class="">
+              <a href="tel:+34%20930347472">+34 930347472</a>
+            </li>
+            <li class="remove_hyperlink">
+              <a href="#">For corporate enquiries, brand and incentive trips, and bespoke group bookings of <b class="text-white">80+</b> guests, please contact our MICE department directly.</a>
+            </li>
+            <li class="remove_hyperlink">
+              <a href="#">Fatima Hernandez</a>
+            </li>
+            <li class="">
+              <a href="mailto:mhospitality@theimigroup.eu?subject=O%20Beach%20Ibiza%20enquiry">mhospitality@theimigroup.eu</a>
+            </li>
+            <li class="">
+              <a href="tel:+34%20683597%20605">+34 683597 605</a>
+            </li>
+            <li class="remove_hyperlink">
+              <a href="#">For Marketing and Press Enquiries.</a>
+            </li>
+            <li class="">
+              <a href="mailto:marketing@obeachibiza.com">marketing@obeachibiza.com</a>
+            </li>
+            <li class="remove_hyperlink">
+              <a href="#">For Membership and App related queries and enquiries.</a>
+            </li>
+            <li class="">
+              <a href="mailto:support@obeach.app?subject=App%20related%20Enquiry">support@obeach.app</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Footer__info">
+        <LanguageSwitcher modifier="LanguageSwitcher--footer" />
+
+        <div class="Footer__copyright">{t('copyright')}</div>
+      </div>
+    </div>
+
+    <div class="Footer__right">
+      <div class="Footer__right__image">
+        <div class=" intrinsic-image" style="--six-intrinsic-ratio: 1200/708; --six-intrinsic-fallback: 59%">
+          <img src="/media/2023/08/shark.webp" width="1200" height="708" alt="" loading="lazy" />
+        </div>
+      </div>
+      <h3>{t('discoverBlog')}</h3>
+
+      <a href={l('/blog')} class="Footer__link">{t('jumpIn')}</a>
+    </div>
+  </div>
+</footer>

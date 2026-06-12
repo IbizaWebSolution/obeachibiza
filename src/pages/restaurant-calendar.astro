@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import RestaurantBookingCalendar from '../components/RestaurantBookingCalendar.astro';
+import ImageRow from '../components/ImageRow.astro';
+import CardsRow from '../components/CardsRow.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/restaurant-calendar/00-HeroCTA.json';
+import booking01 from '../data/sections/restaurant-calendar/01-RestaurantBookingCalendar.json';
+import imageRow02 from '../data/sections/restaurant-calendar/02-ImageRow.json';
+import cardsRow03 from '../data/sections/restaurant-calendar/03-CardsRow.json';
+
+const m = meta['restaurant-calendar'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <HeroCTA {...hero00.props} />
+  <article class="post" id="post-405012">
+    <div class="grid">
+      <div class="container">
+        <RestaurantBookingCalendar {...booking01.props} />
+        <ImageRow {...imageRow02.props} />
+        <CardsRow {...cardsRow03.props} />
+      </div>
+    </div>
+  </article>
+</Base>

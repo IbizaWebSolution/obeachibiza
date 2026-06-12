@@ -1,0 +1,341 @@
+/* Fuente de titulares GT Proelium (servida localmente) */
+@font-face {
+  font-family: 'GT Proelium';
+  src: url('/fonts/gt-proelium.woff2') format('woff2'),
+    url('/fonts/gt-proelium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * Capa de comportamiento de la demo: el tema original animaba estos estados
+ * con GSAP + inline styles; aquí los resolvemos con clases + transiciones CSS.
+ */
+
+/* El tema renderiza BurgerMenu y heros con opacity:0 inline a la espera de GSAP. */
+.BurgerMenu[style],
+.HeroCTA[style] {
+  opacity: 1 !important;
+}
+
+/* Entrada del header: GSAP lo hacía aparecer; lo replicamos en CSS */
+.Header--intro-animation .Header__inner {
+  animation: demo-header-in 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0.35s forwards;
+}
+@keyframes demo-header-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cursor personalizado: anclado al origen del viewport (el JS lo desplaza) */
+.Cursor {
+  left: 0;
+  top: 0;
+}
+
+/* Intro del hero de la home: GSAP expandía el círculo; lo replicamos en CSS */
+.HeroCTA--intro-animation {
+  animation: demo-hero-reveal 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.4s forwards;
+}
+.HeroCTA--intro-animation .HeroCTA__content {
+  animation: demo-hero-content 0.9s cubic-bezier(0.19, 1, 0.22, 1) 1.1s forwards;
+}
+.HeroCTA--intro-animation .HeroCTA__intro-circle {
+  animation: demo-circle-fade 0.6s ease-out 0.7s forwards;
+}
+@keyframes demo-hero-reveal {
+  to {
+    clip-path: circle(120% at 50% 50%);
+  }
+}
+@keyframes demo-hero-content {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes demo-circle-fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Apertura del menú burger (estado de body que ya usa el CSS del tema) */
+.BurgerMenu__inner {
+  transition: opacity 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.BurgerMenu__reveal {
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+body.burger-menu-open .BurgerMenu__reveal {
+  transform: translateX(0) translateY(-50%);
+}
+
+/* Paneles SlideOut (pullouts de tarjetas y eventos) */
+.SlideOut {
+  transition: transform 0.55s cubic-bezier(0.19, 1, 0.22, 1),
+    visibility 0s linear 0.55s;
+}
+.SlideOut.is-active {
+  transition: transform 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Overlay oscuro de fondo al abrir menú/paneles */
+.js-site-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity 0.4s ease;
+  z-index: 15;
+}
+body.burger-menu-open .js-site-overlay,
+body.slideout-open .js-site-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Cursor personalizado: solo en dispositivos con puntero fino */
+@media (hover: none), (pointer: coarse) {
+  .Cursor {
+    display: none !important;
+  }
+}
+
+/* Newsletter en modo demo: feedback visual sin backend */
+.Newsletter__success-msg,
+.Newsletter__error-msg {
+  display: none;
+}
+.Newsletter.is-success .Newsletter__success-msg {
+  display: block;
+}
+.Newsletter.is-error .Newsletter__error-msg {
+  display: block;
+}
+
+/* Acordeón de FAQs (la demo lo colapsa con JS) */
+.inside-faq > h3 {
+  cursor: pointer;
+}
+.inside-faq.demo-collapsed > h3 ~ * {
+  display: none;
+}
+
+/* Placeholder "Próximamente" — sustituye iframes/APIs de terceros
+   (PremiumGuest, CoverManager, Google Maps, Instagram). Ver ComingSoon.astro */
+.ComingSoon {
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 164, 0, 0.08), transparent 60%),
+    repeating-linear-gradient(
+      45deg,
+      #fafafa,
+      #fafafa 18px,
+      #f3f3f3 18px,
+      #f3f3f3 36px
+    );
+  border: 2px dashed #ffa400;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+  width: 100%;
+}
+.ComingSoon__inner {
+  max-width: 560px;
+}
+.ComingSoon__badge {
+  background: #ffa400;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-block;
+  font-family: tw_cen_mtregular, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+  padding: 7px 18px;
+  text-transform: uppercase;
+}
+.ComingSoon__title {
+  color: #454545;
+  font-family: 'GT Proelium', tw_cen_mtregular, sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.05;
+  margin: 0 0 14px;
+}
+.ComingSoon__text {
+  color: #6b6b6b;
+  font-family: tw_cen_mtregular, sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Control de vídeo: los heros arrancan en pausa (muestran su poster).
+   Botón de play centrado; sobre el vídeo el cursor personalizado muestra
+   PLAY/PAUSE. En táctil (sin cursor propio) el botón hace de control. */
+.HeroCTA__media.has-video-control {
+  position: relative;
+}
+.HeroCTA__media.has-video-control video {
+  cursor: none;
+}
+body.no-custom-cursor .HeroCTA__media.has-video-control video {
+  cursor: pointer;
+}
+
+/* Hero x-center: el tema computa display:grid en HeroCTA__content y el título
+   queda descentrado; se fuerza columna flex centrada (título + Book Now). */
+.HeroCTA.HeroCTA--x-center .HeroCTA__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.HeroCTA.HeroCTA--x-center .HeroCTA__banner_logo {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Los carruseles por desplazamiento (EventsRow/CardsRow) no deben generar
+   scroll horizontal del documento */
+.EventsRow,
+.CardsRow {
+  overflow-x: clip;
+}
+
+/* Aviso discreto para acciones no implementadas en la demo */
+.demo-toast {
+  background: #454545;
+  border-radius: 999px;
+  bottom: 24px;
+  color: #fff;
+  font-family: tw_cen_mtregular, sans-serif;
+  font-size: 15px;
+  left: 50%;
+  opacity: 0;
+  padding: 12px 26px;
+  pointer-events: none;
+  position: fixed;
+  transform: translateX(-50%) translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 99;
+}
+.demo-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Título de página solo para lectores de pantalla/SEO (páginas cuyo
+   hero no lleva título visible por diseño) */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Selector de idioma con banderas (replica el aspecto Choices.js del  */
+/* tema original: píldora 116x38 con borde, bandera y chevron).        */
+/* ------------------------------------------------------------------ */
+.LanguageSwitcher .choices {
+  position: relative;
+}
+.LanguageSwitcher__toggle {
+  align-items: center;
+  background: none;
+  border: 0;
+  color: inherit;
+  display: flex;
+  font: inherit;
+  text-align: left;
+  width: 100%;
+}
+body.no-custom-cursor .LanguageSwitcher__toggle,
+body.no-custom-cursor .LanguageSwitcher__option {
+  cursor: pointer;
+}
+/* la bandera ocupa el sitio del icono de globo original */
+.LanguageSwitcher .choices__inner::before {
+  display: none;
+}
+.LanguageSwitcher__flag {
+  border-radius: 2px;
+  display: block;
+  flex: none;
+  height: 14px;
+  object-fit: cover;
+  width: 20px;
+}
+.LanguageSwitcher__toggle .LanguageSwitcher__flag {
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.LanguageSwitcher__dropdown {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  left: 0;
+  list-style: none;
+  margin: 4px 0 0;
+  min-width: 116px;
+  overflow: hidden;
+  padding: 6px 0;
+  position: absolute;
+  top: 100%;
+  z-index: 30;
+}
+.LanguageSwitcher__dropdown li {
+  list-style: none;
+}
+.LanguageSwitcher__option {
+  align-items: center;
+  color: #454545;
+  display: flex;
+  gap: 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.LanguageSwitcher__option:hover {
+  background: #f4f4f4;
+}
+.LanguageSwitcher__option.is-active {
+  font-weight: 700;
+}
+
+/* Variante burger (fondo blanco): borde y texto oscuros, chevron oscuro */
+.LanguageSwitcher--burger {
+  margin: 35px 0 0;
+}
+.LanguageSwitcher--burger .choices {
+  border-color: #454545;
+  color: #454545;
+}
+.LanguageSwitcher--burger .choices__list--single .choices__item {
+  color: #454545;
+}
+.LanguageSwitcher--burger .choices[data-type*='select-one']::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.414' height='6.121'%3E%3Cpath d='m8.707.707-4 4-4-4' fill='none' stroke='%23454545' stroke-width='2'/%3E%3C/svg%3E");
+}
+.LanguageSwitcher--burger .LanguageSwitcher__dropdown {
+  border: 1px solid #e5e5e5;
+}

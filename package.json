@@ -1,0 +1,25 @@
+{
+  "name": "obeachibiza-demo",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "optimize": "node scripts/optimize-images.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.4.6",
+    "flickity": "^3.0.0",
+    "flickity-fade": "^2.0.0",
+    "iframe-resizer": "^4.4.5",
+    "sharp": "^0.35.0"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "cheerio": "^1.2.0",
+    "puppeteer-core": "^25.1.0",
+    "purgecss": "^8.0.0"
+  }
+}

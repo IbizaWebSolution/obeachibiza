@@ -1,0 +1,353 @@
+---
+// FAQs - acordeon de preguntas/respuestas (div.content-container.body_copy de /faqs/)
+const html = `
+<div class="content-container body_copy">
+    <div class="container">
+        <section class="row clearfix">
+            <article class="tab_container col-sm-12">
+                          <div class="col-sm-6">
+                                        <div class="inside-faq">
+                          <h3>WHAT ARE THE OPENING TIMES?</h3>
+                          <div>
+                              <p class="p1">Our standard opening hours are from 13:00h until between 22:00h and 23:00h, depending</p>
+<p class="p1">on the event and time of season.</p>
+<p class="p1"><strong>Low Season</strong>: 13:00h – approximately 22:00h</p>
+<p class="p1"><strong>High Season &amp; Special Events</strong>: 13:00h – approximately 23:00h</p>
+<p class="p1"><strong>Restaurant</strong>: 13:00h – 21:00h</p>
+<p class="p1">Please note that <strong>operating hours may vary</strong> depending on the event, weather conditions, or</p>
+<p class="p1">management discretion.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>DO I NEED ENTRY TICKETS IF I HAVE BOOKED AN AREA ?</h3>
+                          <div>
+                              <p class="p1">Entry is already included in the price of all beds, tables, cabanas, and sofas throughout the</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN I ADD GUESTS TO MY RESERVATION?</h3>
+                          <div>
+                              <p class="p1">Each bed or table booking is valid for a set number of guests. Additional guests cannot be added, so please ensure your reservation covers the total number of people attending.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>DO YOU PROVIDE FREE WIFI WITHIN THE VENUE?</h3>
+                          <div>
+                              <p>Yes free Wi-Fi is provided within the venue, so please post away on your Social Media!</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN I BRING LUGGAGE INTO THE DAY CLUB?</h3>
+                          <div>
+                              <p>We do not store any luggage, large bags or bike helmets at the venue or at any of our venues, so they will not be permitted inside.</p>
+<p class="p1">For luggage assistance, you can contact Ibiza Luggage, who offer a convenient island-wide collection and delivery service.</p>
+<p>&nbsp;</p>
+<div class="d-flex image-content-row">
+<div class="img"><img decoding="async" class="alignnone size-medium wp-image-760758" src="/media/2025/06/Logo_-1-e1750755509572-800x669.webp" alt="" width="57" height="68"></div>
+<div class="content">
+<p><strong>IBIZA LUGGAGE</strong></p>
+<p><em>Live your day stress-free- we pick up your bags, keep them safe and deliver them right when and where you want, so you can enjoy O Beach and everything else the island has to offer..</em></p>
+</div>
+<div><a class="PrimaryLink HighlightSol HighlightSol--core LinkBase" href="https://wa.link/hcka7t" target="_blank" rel="noreferrer noopener">BOOK NOW</a></div>
+</div>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>ARE CHILDREN ALLOWED IN THE DAY CLUB?</h3>
+                          <div>
+                              <p class="p1">O Beach Ibiza is an adult-only venue. Guests must be 18 or over to enter.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>IF IT RAINS, WILL I BE ISSUED WITH A REFUND?</h3>
+                          <div>
+                              <p class="p1">O Beach Ibiza operates a <strong>strict no-refund policy</strong>. In the event of adverse or unsafe weather</p>
+<p class="p1">conditions, the venue may adjust operating hours, event programming, or close early for</p>
+<p class="p1">safety reasons.</p>
+<p class="p1">If the day club is required to close in full due to extreme weather, you may request to move</p>
+<p class="p1">your booking to another available date within the same season (subject to availability). This</p>
+<p class="p1">change must be requested before 12:00 noon on the day of your original booking by</p>
+<p class="p1">contacting our team on +34 971 80 32 60.</p>
+<p class="p1">Where the venue remains open and operational, no refunds or compensation will be issued</p>
+<p class="p1">under any circumstances.</p>
+<p class="p1">For more information, please refer to our full Terms &amp; Conditions.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WILL I BE PROVIDED WITH TOWELS?</h3>
+                          <div>
+                              <p class="p1">A limited number of towels are provided for guests with bed, table, or cabana reservations.</p>
+<p class="p1">Guests with entry tickets do not receive towels, however there may be a limited amount for</p>
+<p class="p1">use on the day. Personal towels are not permitted inside the venue.</p>
+<p class="p1">Towels can be purchased from the O Beach Boutique – please retain your purchase receipt if</p>
+<p class="p1">you wish to take your towel home.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>ARE THERE LOCKERS FOR ME TO USE?</h3>
+                          <div>
+                              <p class="p1">Yes – lockers are available inside the day club for guests to use at a cost of €10 per day. Each</p>
+<p class="p1">locker includes a complimentary phone charger, and you may open and close it as many</p>
+<p class="p1">times as you like throughout the day.</p>
+<p class="p1">Please ask a Host on the day to show you where the lockers are located.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN WE BRING FOOD AND DRINK INTO THE DAY CLUB?</h3>
+                          <div>
+                              <p>No – food and drink (including water) purchased elsewhere cannot be brought inside the day<br>
+club. This also applies to items from the THB Ocean Beach Hotel/BONITO.</p>
+<p>If you have any dietary requirements or allergies, please contact the day club in advance of<br>
+your visit so we can review and accommodate your request where possible.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WHEN DO I PAY THE OUTSTANDING BALANCE ON MY BOOKING?</h3>
+                          <div>
+                              <p class="p1">Your waiter will process the remaining balance upon your arrival at your bed or table.</p>
+<p class="p1">Payment can be made by card or cash on the day.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>DO I NEED TO USE THE SAME CARD THAT WAS USED TO PAY THE DEPOSIT TO PAY THE  OUTSTANDING AMOUNT?</h3>
+                          <div>
+                              <p>This is not necessary. You will be able to pay using a different card or in cash on the day.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN I BUY VIP WRISTBANDS?</h3>
+                          <div>
+                              <p>No. Only guests with VIP Bed bookings will be provided with VIP wristbands.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WHERE CAN I SEND MY C.V?</h3>
+                          <div>
+                              <p>You can upload it directly to our Recruitment page.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>IS THERE A DRESS CODE?</h3>
+                          <div>
+                              <p class="p1">O Beach Ibiza reserves the right to refuse admission for unsuitable attire. Prohibited items</p>
+<p class="p1">and clothing include, but are not limited to:</p>
+<p class="p1">• Body paint, fancy dress, or novelty costumes</p>
+<p class="p1">• Hen and stag accessories such as veils, crowns, sashes, or matching t-shirts/clothing</p>
+<p class="p1">• Novelty or themed footwear</p>
+<p class="p1">• Props of any kind, including inflatables</p>
+<p class="p1">Guests are expected to dress appropriately for a daytime pool environment. Swimwear must</p>
+<p class="p1">be worn when entering the pool, and footwear is required at all times when moving around</p>
+<p class="p1">the venue.</p>
+<p class="p1">All guests must wear suitable footwear upon arrival and are required to depart the venue</p>
+<p class="p1">respectfully dressed.Sporting team tops are strictly prohibited.</p>
+<p class="p1">Clothing displaying offensive language, imagery, or symbols will not be permitted.</p>
+<p class="p1">For more information, please refer to our full Terms &amp; Conditions.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>ARE UMBRELLAS GUARANTEED WITH ALL BEDS?</h3>
+                          <div>
+                              <p>Umbrellas are not guaranteed in the Sunset Lounge Area. All other Beds and Tables do have umbrellas subject to weather conditions.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN YOU EXPLAIN WHAT THE COVER CHARGE / MIN SPEND MEANS?</h3>
+                          <div>
+                              <p>Beds are made up of a Minimum Spend plus a cover charge. The minimum spend means the minimum amount of money you need to spend on that day to secure the bed. This can be<br>
+spent on food &amp; drink of your choice.</p>
+<p>The cover charge is what you pay to hire the bed for the day.</p>
+<p>The deposit paid to secure the bed is deducted from the total cost of the booking, For example, if the bed has a 100€ cover charge and 600€ minimum spend, the total cost of the<br>
+bed is 700€ and you receive 600€ back to spend on food and drink of your choice.</p>
+<p>*Please note that <strong>Ibiza Spray</strong> Events operate under special pricing and packages that differ<br>
+from standard events.</p>
+<p>May &amp; September <strong>Ibiza Spray</strong> Events include a cover charge, minimum spend, and cava package, which provides a set number of cava bottles based on the number of guests per<br>
+table or bed.</p>
+<p>June, July &amp; August<strong> Ibiza Spray</strong> Events include a Champagne Package, combining cava, champagne, and a minimum spend. These packages are fixed and cannot be altered or<br>
+exchanged.</p>
+<p>For full details of what’s included and the pricing for each area, please refer to the event calendar on our website.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN YOU TELL ME HOW MUCH THE PRICE IS IN A CURRENCY OTHER THAN EURO?</h3>
+                          <div>
+                              <p>Unfortunately, we’re unable to confirm the exact amount in GBP as all charges are made in our local currency, Euros (€). The final conversion rate will be determined by your bank or<br>
+card provider at the time of payment.</p>
+<p>As a guide only, you may wish to check the latest exchange rates at <a href="https://www.xe.com">www.xe.com.</a></p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>I HAVE BOOKED WITH THB OCEAN BEACH HOTEL/BONITO IBIZA HOTEL. DO I GET ANY PRIVILEGES?</h3>
+                          <div>
+                              <p><strong>THB OCEAN BEACH HOTEL GUESTS</strong></p>
+<p class="p1">Guests staying at THB Ocean Beach Hotel who have booked their stay via <a href="/"><span class="s1">obeachibiza.com</span></a> or <a href="https://thbhotels.com"><span class="s1">thbhotels.com</span></a> will receive free entry to O Beach Ibiza from Monday to Sunday by showing their hotel wristband at the door of the venue upon entry.</p>
+<p>&nbsp;</p>
+<p class="p1">Guests booking directly via O Beach website or THB website staying at Naeco or Los Molinos will receive 50% discounted entry Monday to Sunday plus one complimentary drinks ticket per person, per visit.</p>
+<p>&nbsp;</p>
+<p class="p1">Offer only applies when paying at the door on the day of the event and showing their hotel wristband. The same applies for any guests booking at any of the THB hotels via a third</p>
+<p class="p1">party.</p>
+<p>&nbsp;</p>
+<p class="p1"><strong>BONITO IBIZA HOTEL</strong></p>
+<p class="p1">Guests staying at Bonito Ibiza Hotel are entitled to exclusive O Beach Ibiza entry benefits, depending on how their stay was booked.</p>
+<p>&nbsp;</p>
+<p class="p1"><strong>Mondays | Wednesdays | Thursdays</strong></p>
+<p class="p1">Guests booking directly via the O Beach Ibiza website receive free entry before 16:00, which includes a VIP wristband.</p>
+<p class="p1">After 16:00: 50% discounted entry applies for the remainder of the day, including one drink and a VIP wristband.</p>
+<p class="p1">Guests booking via a third-party company receive free entry before 14:00, including a VIP wristband.</p>
+<p class="p1">After 14:00: 50% discounted entry applies all day, including one drink and a VIP wristband.</p>
+<p>&nbsp;</p>
+<p class="p1"><strong>Tuesdays | Fridays | Saturdays | Sundays</strong></p>
+<p class="p1">Guests booking directly via the O Beach Ibiza website receive free entry before 16:00, including a VIP wristband.</p>
+<p>&nbsp;</p>
+<p class="p1">After 16:00: 50% discounted entry applies all day, including one drink and a VIP wristband.</p>
+<p>&nbsp;</p>
+<p class="p1">Guests booking via a third-party company are entitled to 50% discounted entry all day, including one drink and a VIP wristband.</p>
+<p class="p1">Guests must present valid hotel proof of stay upon arrival. Entry is subject to venue capacity, event conditions, and management discretion.</p>
+<p>&nbsp;</p>
+<p class="p1">We advise arriving early to avoid queues or disappointment, particularly during high season or special events.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>IS THE BED NUMBER WE HAVE CHOSEN GUARANTEED TO BE THE BED WE HAVE ON THE DAY?</h3>
+                          <div>
+                              <p class="p1">We’ll always do our best to honour your chosen bed or table. However, occasionally, for operational, safety, or event-related reasons, we may need to move your reservation to another suitable area within the venue.</p>
+<p class="p1">If this happens, we’ll ensure your new placement is as comparable as possible, but please note this does not qualify for a refund or compensation.</p>
+                          </div>
+                      </div>
+                                                </div><div class="col-sm-6">
+                                                              <div class="inside-faq">
+                          <h3>DO YOU HAVE AN ATM MACHINE?</h3>
+                          <div>
+                              <p>Yes, we do have an ATM Machine in the venue.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>DO I NEED A TICKET OR NEED TO PAY ENTRY TO ACCESS THE RESTAURANT?</h3>
+                          <div>
+                              <p>All restaurant bookings are subject to a cost of €75 per person.</p>
+<p>To confirm your reservation, a non-refundable prepayment of €50 per person is required at the time of booking.</p>
+<p>This prepayment is split as follows:<br>
+€25 covers your entry fee.<br>
+€25 is credited towards your restaurant minimum spend.</p>
+<p>The remaining €25 per person to complete the €50 minimum spend is payable on the day at the restaurant.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN WE CONTACT THE BOUTIQUE DIRECT?</h3>
+                          <div>
+                              <p>Yes, you can email the Boutique on <a href="mailto:boutique@obeachibiza.com">boutique@obeachibiza.com</a></p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>ARE THERE ANY FREE SEATING AREAS AVAILABLE WITHIN THE VENUE?</h3>
+                          <div>
+                              <p>The venue has a limited number of unreserved seating areas available on a first-come, first-<br>
+served basis, but these cannot be guaranteed. To ensure a dedicated space for the day, we recommend booking a bed or table in advance to avoid disappointment.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>IS IT POSSIBLE TO LEAVE AND RE-ENTER THE DAY CLUB?</h3>
+                          <div>
+                              <p>It is NOT permitted to leave and re-enter. You will be charged the full door/ entry price if you leave and wish to return.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WE HAVE BOOKED A BED FOR IBIZA SPRAY. CAN WE CHANGE THE CHAMPAGNE PACKAGE TO SPIRITS?</h3>
+                          <div>
+                              <p>Unfortunately, the Champagne Packages for Ibiza Spray events cannot be altered or customised. However, you’re welcome to purchase additional drinks from our regular menu on the day to complement your package.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>DO YOU HAVE EVENTS EVERY DAY?</h3>
+                          <div>
+                              <p>Yes, we have events and DJs every day throughout the summer, with special entertainment on selected dates. You can view our full 2025 Events Calendar at<br>
+<a href="/events-calendar/">www.obeachibiza.com/events-calendar.</a></p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WILL WE GET WET?</h3>
+                          <div>
+                              <p>We do like to make guests aware that there are circular water jets built into the pool edge that activate periodically. To keep your belongings safe and dry, we recommend storing any valuables in the lockers provided. This is also outlined in our venue terms and conditions.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WILL MY PHOTOGRAPH BE TAKEN?</h3>
+                          <div>
+                              <p>By entering the venue, you agree to our terms and conditions, which include consent to being photographed or filmed while on the premises. We have in-house photographers and videographers present for certain events (though not all).</p>
+<p>Event photos are usually uploaded<br>
+within a week to our official Facebook page: <a href="https://www.facebook.com/obeachibiza.">www.facebook.com/obeachibiza.</a></p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN I BRING MY CAMERA INTO THE DAY CLUB?</h3>
+                          <div>
+                              <p class="p1">You’re welcome to bring a small personal camera into the venue; however, large-lens or SLR cameras are not permitted. Unauthorised video cameras are also not allowed at any time. If you wish to film inside the Day Club or use professional equipment, please contact our Marketing Team at least one week in advance for approval.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WHAT IS THE SERVICE CHARGE?</h3>
+                          <div>
+                              <p>At O Beach Ibiza, a discretionary 10% service charge is added to all final bills as a gratuity.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>CAN I CHOOSE WHICH SUNSET LOUNGE AREA WE HAVE?</h3>
+                          <div>
+                              <p class="p1">Unfortunately, it’s not possible to select a specific Lounge Area in advance. All Lounge Areas are allocated on arrival by our Host and Hostess team.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WHERE CAN I SUNBATHE?</h3>
+                          <div>
+                              <p>If you’re looking to sunbathe, we recommend booking a bed suitable for this purpose in advance, as guests are not permitted to lie on the grass or around the pool area.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>WE HAVE A BOOKING WITH YOU AND WILL BE CELEBRATING A BIRTHDAY/ A SPECIAL OCCASION. IS THERE ANYTHING SPECIAL YOU CAN DO FOR US?</h3>
+                          <div>
+                              <p>Yes, we offer a range of Celebration Packages which can now be booked directly online under the “Celebration Packages” section.</p>
+<p>For any questions, please contact our Sales Team at <a href="mailto:sales@obeachibiza.com.">sales@obeachibiza.com.</a></p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>DO YOU ACCEPT CRYPTOCURRENCY?</h3>
+                          <div>
+                              <p>O Beach Ibiza is recognised as an accepted establishment for spending cryptocurrency.</p>
+<p>Please note, we do not receive cryptocurrency directly nor assume any risk related to currency value fluctuations.</p>
+<p>Payments are processed through <strong>Bitnovo</strong>, who convert the cryptocurrency into euros and<br>
+deposit the equivalent value directly into our bank account’s.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>I NEED TO BRING MY MEDICATION (E.G. INSULIN). HOW WILL THIS BE HANDLED AT THE VENUE?</h3>
+                          <div>
+                              <p class="p1">Guests who require medication (including insulin or temperature-sensitive treatments) are</p>
+<p class="p1">welcome to inform staff on arrival or in advance of their visit. Security will provide clear</p>
+<p class="p1">guidance on the available options for medication, which can either be:</p>
+<p class="p1">• Kept on the guest’s person entirely at their own risk and responsibility, <strong>or</strong></p>
+<p class="p1">• Stored securely with our on-site medical team in the infirmary, where refrigeration is available if needed.</p>
+<p class="p1">Guests may access the infirmary at any time if they wish to store or self-administer medication privately.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>HOW FAR IN ADVANCE SHOULD WE BOOK BEDS?</h3>
+                          <div>
+                              <p>We launch our bed bookings in <strong>November</strong> each year. We always recommend booking as far<br>
+in advance as possible to avoid disappointment, as preferred areas and dates often sell out<br>
+closer to the time.</p>
+                          </div>
+                      </div>
+                                                              <div class="inside-faq">
+                          <h3>ARE THERE FACILITIES FOR GUESTS WITH REDUCED MOBILITY OR WHEELCHAIR ACCESS?</h3>
+                          <div>
+                              <p>Yes, O Beach Ibiza is accessible for guests with reduced mobility. The venue has step-free access points, accessible restrooms, and staff on hand to assist where needed. If you require specific support on arrival, please speak with our Security or Host Team, who will be happy<br>
+to help.</p>
+                          </div>
+                      </div>
+                                                      </div>
+                          </article>
+        </section>
+    </div>
+</div>
+`;
+---
+<Fragment set:html={html} />

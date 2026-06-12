@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import PageWithSideMenu from '../components/PageWithSideMenu.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/privacy-policy/00-HeroCTA.json';
+import page01 from '../data/sections/privacy-policy/01-PageWithSideMenu.json';
+
+const m = meta['privacy-policy'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <h1 class="visually-hidden">Privacy Policy</h1>
+  <HeroCTA {...hero00.props} />
+  <article class="post" id="post-115292">
+    <div class="grid">
+      <div class="container">
+        <PageWithSideMenu {...page01.props} />
+      </div>
+    </div>
+  </article>
+</Base>

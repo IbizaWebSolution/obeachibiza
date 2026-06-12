@@ -1,0 +1,90 @@
+---
+interface SlideImage {
+  /** URL local ya resuelta de media-map.json */
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  /** Atributo style del wrapper intrinsic-image, p. ej. "--six-intrinsic-ratio: 1080/1080; --six-intrinsic-fallback: 100%" */
+  style: string;
+}
+
+interface Slide {
+  image: SlideImage;
+  /** Texto del Slide__label */
+  label: string;
+  /** Texto del Slide__title (h4) */
+  title: string;
+  button: {
+    href: string;
+    label: string;
+  };
+}
+
+interface Props {
+  slides: Slide[];
+}
+
+const { slides } = Astro.props;
+
+// g-options del Carousel tal cual el original (cellCount depende del nº de slides).
+const carouselOptions = JSON.stringify({
+  cellCount: slides.length,
+  instagramStyleProgressBar: false,
+  carousel_if_greater_than: [],
+  cellAlign: 'left',
+  contain: true,
+  freeScroll: false,
+  lazyLoad: 3,
+  fade: 'true',
+  autoPlay: false,
+  wrapAround: true,
+  cellSelector: '.Slide',
+  pageDots: true,
+  groupCells: false,
+  prevNextButtons: false,
+  hash: false,
+  imagesLoaded: true,
+  setGallerySize: true,
+  draggable: true,
+  adaptiveHeight: false,
+  identifier: '',
+});
+const slideOptions = JSON.stringify({ someOption: 'value', transition: 'grow' });
+---
+
+<section class="Slider  Slider--footer" g-options="null">
+  <div class="Slider__inner">
+    <section
+      class="Carousel "
+      g-component="Carousel"
+      g-options={carouselOptions}
+      data-identifier=""
+    >
+      {slides.map((slide) => (
+        <div class="Slide  Slide--title-caps" g-component="Slide" g-options={slideOptions}>
+          <div class="Slide__left">
+            <div class="Slide__image">
+              <div class=" intrinsic-image" style={slide.image.style}>
+                <img
+                  src={slide.image.src}
+                  width={slide.image.width}
+                  height={slide.image.height}
+                  alt={slide.image.alt || slide.title}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="Slide__right">
+            <div class="Slide__label">{slide.label}</div>
+
+            <h4 class="Slide__title">{slide.title}</h4>
+
+            <a href={slide.button.href} class="button">{slide.button.label}</a>
+          </div>
+        </div>
+      ))}
+    </section>
+  </div>
+</section>

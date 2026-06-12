@@ -1,0 +1,137 @@
+{
+  "type": "EventsRow",
+  "props": {
+    "title": "Daily Parties",
+    "identifier": "6a2a6d379ba32",
+    "viewAllHref": "/events-calendar/",
+    "viewAllText": "View All",
+    "events": [
+      {
+        "href": "#",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 3641/2731; --six-intrinsic-fallback: 75.006866245537%",
+          "src": "/media/2025/11/Copy-of-Obeach-one-26-th-June_0179-aspect-ratio-4-3.webp",
+          "width": 3641,
+          "height": 2731,
+          "alt": ""
+        },
+        "tags": ["Monday", "HOUSE"],
+        "label": "",
+        "title": "Monday Selection"
+      },
+      {
+        "href": "",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 7286/5464; --six-intrinsic-fallback: 74.993137524019%",
+          "src": "/media/2026/04/Obeach-Kiss-FM-24May_158-aspect-ratio-4-3.webp",
+          "width": 7286,
+          "height": 5464,
+          "alt": ""
+        },
+        "tags": ["Tuesday", "Old Skool Anthems"],
+        "label": "",
+        "title": "KISSTORY"
+      },
+      {
+        "href": "#",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 3531/2648; --six-intrinsic-fallback: 74.992919852733%",
+          "src": "/media/2025/11/obeach-cumple-obe0013-2-aspect-ratio-4-3.webp",
+          "width": 3531,
+          "height": 2648,
+          "alt": ""
+        },
+        "tags": ["Wednesday", "House"],
+        "label": "",
+        "title": "House in Paradise"
+      },
+      {
+        "href": "#",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 6487/4865; --six-intrinsic-fallback: 74.996146138431%",
+          "src": "/media/2025/11/Copy-of-HIP-21-MAY096-aspect-ratio-4-3.webp",
+          "width": 6487,
+          "height": 4865,
+          "alt": ""
+        },
+        "tags": ["Thursday", "House"],
+        "label": "",
+        "title": "O Beach Music"
+      },
+      {
+        "href": "#",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 7286/5464; --six-intrinsic-fallback: 74.993137524019%",
+          "src": "/media/2026/04/Copy-of-KIssstory150-1-aspect-ratio-4-3-1.webp",
+          "width": 7286,
+          "height": 5464,
+          "alt": ""
+        },
+        "tags": ["Friday", "House"],
+        "label": "",
+        "title": "Pool Party"
+      },
+      {
+        "href": "#",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 1440/1080; --six-intrinsic-fallback: 75%",
+          "src": "/media/2025/08/HIP-Header-1-min-aspect-ratio-4-3-1.webp",
+          "width": 1440,
+          "height": 1080,
+          "alt": ""
+        },
+        "tags": ["Saturday", "Soulful House and House"],
+        "label": "",
+        "title": "Soul Heaven"
+      },
+      {
+        "href": "",
+        "cursorText": "VIEW",
+        "options": {
+          "someOption": "value",
+          "transition": "grow"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 7286/5464; --six-intrinsic-fallback: 74.993137524019%",
+          "src": "/media/2025/08/Kisstory-min-aspect-ratio-4-3.webp",
+          "width": 7286,
+          "height": 5464,
+          "alt": ""
+        },
+        "tags": ["Sunday", "House"],
+        "label": "",
+        "title": "Sunday Selection"
+      }
+    ]
+  }
+}

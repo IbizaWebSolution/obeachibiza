@@ -1,0 +1,21 @@
+{
+  "type": "ImageRow",
+  "props": {
+    "left": {
+      "src": "/media/2023/08/Copy-of-IMG_1124.webp",
+      "width": 896,
+      "height": 1080,
+      "alt": "",
+      "ratio": "896/1080",
+      "fallback": "120.53571428571%"
+    },
+    "right": {
+      "src": "/media/2023/08/Copy-of-DSCF4343-1.webp",
+      "width": 584,
+      "height": 704,
+      "alt": "",
+      "ratio": "584/704",
+      "fallback": "120.54794520548%"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+---
+interface IntrinsicImage {
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  ratio: string;
+  fallback: string;
+}
+
+interface Props {
+  image?: IntrinsicImage;
+  title: string;
+  link?: { href: string; label: string; target?: string };
+  subtitleHtml?: string;
+  contentTitle?: string;
+  contentHtml?: string;
+}
+
+const { image, title, link, subtitleHtml, contentTitle, contentHtml } = Astro.props;
+---
+
+<article class="DetailCard " g-component="DetailCard" g-options="null">
+	<div class="[ DetailCard__inner ]">
+		{image && (
+			<div
+				class="[ DetailCard__image ] intrinsic-image"
+				style={`--six-intrinsic-ratio: ${image.ratio}; --six-intrinsic-fallback: ${image.fallback}`}
+			>
+				<img
+					src={image.src}
+					width={image.width}
+					height={image.height}
+					alt={image.alt || title}
+					loading="lazy"
+				/>
+			</div>
+		)}
+		<header class="[ DetailCard__header ]">
+			<div class="[ DetailCard__header__title ]">
+				<h2>{title}</h2>
+				{link && (
+					<a href={link.href} target={link.target ?? ''} class="[ DetailCard__header__link ]">
+						{link.label}
+					</a>
+				)}
+			</div>
+			{subtitleHtml && (
+				<div class="[ DetailCard__header__subtitle ]">
+					<Fragment set:html={subtitleHtml} />
+				</div>
+			)}
+		</header>
+	</div>
+	{(contentTitle || contentHtml) && (
+		<div class="[ DetailCard__content ]">
+			{contentTitle && <h3 class="[ DetailCard__content__title ]">{contentTitle}</h3>}
+			{contentHtml && (
+				<div class="[ DetailCard__content__body ]">
+					<Fragment set:html={contentHtml} />
+				</div>
+			)}
+		</div>
+	)}
+</article>

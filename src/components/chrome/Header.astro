@@ -1,0 +1,40 @@
+---
+// Cabecera principal. Por decisión de diseño de la demo, los enlaces del
+// navbar superior se han retirado: toda la navegación vive en el menú
+// desplegable (botón "Menu" → BurgerMenu).
+import { useTranslations, localePath } from '../../i18n/ui';
+
+const locale = Astro.currentLocale;
+const t = useTranslations(locale);
+const l = (path: string) => localePath(locale, path);
+---
+
+<header class="[ l-Header ]">
+  <header class="Header  Header--intro-animation" g-component="Header" g-options='{"someOption":"value","transition":"grow"}'>
+    <div class="Header__inner" g-ref="inner">
+      <div class="Header__logo" g-ref="logo">
+        <div class="Header__logo--vertical">
+          <a href={l('/')} title="O Beach Ibiza">
+            <img src="/img/logo-small.svg" alt="O Beach" width="60" height="90" />
+          </a>
+        </div>
+        <div class="Header__logo--horizontal">
+          <a href={l('/')} title="O Beach Ibiza">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+              <path id="Path_17254" data-name="Path 17254" d="M24.047,21.962A7.962,7.962,0,1,1,32.009,14a7.962,7.962,0,0,1-7.962,7.962M24.047,0a14,14,0,1,0,14,14,14,14,0,0,0-14-14" transform="translate(-10.047)" fill="#ffa400"></path>
+            </svg>
+            O Beach Ibiza
+          </a>
+        </div>
+      </div>
+      <div class="Header__btns">
+        <a href={l('/events-calendar/')} class="Header__btns__btn">{t('bookABed')}</a>
+        <button class="button Burger" g-ref="burger">{t('menu')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10">
+            <g transform="translate(19805 14647)"><line x1="20" transform="translate(-19805 -14646)" fill="none" stroke="#454545" stroke-width="2"></line><line x1="20" transform="translate(-19805 -14638)" fill="none" stroke="#454545" stroke-width="2"></line></g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</header>

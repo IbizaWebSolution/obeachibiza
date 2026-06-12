@@ -1,0 +1,18 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "image",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "featured-image",
+    "image": {
+      "src": "/media/2020/01/Header-Celebration-Pacakge-Page.webp",
+      "width": 1920,
+      "height": 685,
+      "alt": "",
+      "class": "attachment-full size-full wp-post-image"
+    },
+    "titleHtml": "Celebration Packages"
+  }
+}

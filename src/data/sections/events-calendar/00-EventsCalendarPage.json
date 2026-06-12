@@ -1,0 +1,102 @@
+{
+  "type": "EventsCalendarPage",
+  "props": {
+    "heroTitle": "Ibiza Party Calendar",
+    "heroImage": {
+      "src": "/media/2026/03/Copy-of-KIssstory145-1.webp",
+      "width": 1980,
+      "height": 1321,
+      "alt": ""
+    },
+    "introHtml": "There’s a reason why Ibiza is the party capital of the world—let us show you any day of the week this summer with our Ibiza party calendar.",
+    "embed": {
+      "iframeId": "pgevents",
+      "iframeSrc": "https://sales.premiumguest.com/obeachibiza/en/?mode=list",
+      "height": 200
+    },
+    "explore": {
+      "title": "Explore",
+      "identifier": "6a2a75c74d4c9",
+      "cards": [
+        {
+          "href": "/day-club/",
+          "title": "Day Club",
+          "cursorText": "VIEW",
+          "image": {
+            "src": "/media/2023/08/dayclub-still-aspect-ratio-6-7-1.webp",
+            "width": 964,
+            "height": 1125,
+            "ratio": "964/1125",
+            "fallback": "116.70124481328%",
+            "alt": ""
+          }
+        },
+        {
+          "href": "/events-calendar/",
+          "title": "Events Calendar",
+          "cursorText": "VIEW",
+          "image": {
+            "src": "/media/2026/04/Copy-of-Copy-of-DSC06108-aspect-ratio-6-7.webp",
+            "width": 4000,
+            "height": 4667,
+            "ratio": "4000/4667",
+            "fallback": "116.675%",
+            "alt": ""
+          }
+        },
+        {
+          "href": "/open-positions/",
+          "title": "Recruitment",
+          "cursorText": "VIEW",
+          "image": {
+            "src": "/media/2024/04/ROMU1343-aspect-ratio-6-7.webp",
+            "width": 515,
+            "height": 600,
+            "ratio": "515/600",
+            "fallback": "116.50485436893%",
+            "alt": ""
+          }
+        },
+        {
+          "href": "/restaurant-calendar/",
+          "title": "Restaurant",
+          "cursorText": "VIEW",
+          "image": {
+            "src": "/media/2023/08/Restaurant-aspect-ratio-6-7.webp",
+            "width": 600,
+            "height": 700,
+            "ratio": "600/700",
+            "fallback": "116.66666666667%",
+            "alt": ""
+          }
+        },
+        {
+          "href": "/celebration-packages/",
+          "title": "Celebration Packages",
+          "cursorText": "VIEW",
+          "image": {
+            "src": "/media/2023/08/CelebrationPackages-aspect-ratio-6-7.webp",
+            "width": 514,
+            "height": 600,
+            "ratio": "514/600",
+            "fallback": "116.73151750973%",
+            "alt": ""
+          }
+        },
+        {
+          "href": "https://store.obeachibiza.com/",
+          "title": "The Boutique",
+          "cursorText": "VIEW",
+          "image": {
+            "src": "/media/2023/08/Boutique-aspect-ratio-6-7.webp",
+            "width": 514,
+            "height": 600,
+            "ratio": "514/600",
+            "fallback": "116.73151750973%",
+            "alt": ""
+          }
+        }
+      ]
+    }
+  }
+}

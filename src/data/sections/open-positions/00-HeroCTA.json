@@ -1,0 +1,18 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "image",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "featured-image",
+    "image": {
+      "src": "/media/2021/11/staff20.webp",
+      "width": 2000,
+      "height": 714,
+      "alt": "",
+      "class": "attachment-full size-full wp-post-image"
+    },
+    "titleHtml": "Work With Us"
+  }
+}

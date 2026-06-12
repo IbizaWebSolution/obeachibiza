@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import BonitoHotelSections from '../components/pages/BonitoHotelSections.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/bonito-hotel/00-HeroCTA.json';
+
+const m = meta['bonito-hotel'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <h1 class="visually-hidden">Bonito Hotel</h1>
+  <HeroCTA {...hero00.props} />
+  <BonitoHotelSections />
+</Base>

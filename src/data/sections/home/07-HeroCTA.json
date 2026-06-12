@@ -1,0 +1,18 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "video",
+    "x": "left",
+    "y": "center",
+    "video": {
+      "mp4": "/media/videos/vimeo-792638835-540p.mp4",
+      "poster": "/media/videos/posters/poster-1595499545.jpg"
+    },
+    "titleHtml": "Book a Bed for<br>\n2026 Now",
+    "button": {
+      "href": "/events-calendar/",
+      "label": "Book Now"
+    }
+  }
+}

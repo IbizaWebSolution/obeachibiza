@@ -1,0 +1,110 @@
+---
+// Bed Menus - hero antiguo + intro con botones PDF (de /bed-menus/). El <style> suelto del original define .common-button/.repeater-item.
+const html = `
+<div class="hero-container">
+	<div class="img-container">
+		<img src="/media/2020/08/drinks-packages-hero.webp" class="full-width">
+
+		<div class="hero-title">
+			<h1>Bed Menus</h1>
+		</div>
+
+	</div>
+</div>
+
+<div class="grid">
+		<div class="container">
+							<h4 style="margin:0">Settle into the ultimate day-to-night experience at O Beach Ibiza. Whether you're lounging in luxury or dancing under the sun, our menus are designed to keep you refreshed and satisfied. Indulge in incredible dishes, poolside bites, and vibrant cocktails, all crafted to elevate your beach club vibe. Sip, savour, and soak it all in.</h4>
+						
+		</div>
+		<div class="button-column">
+    		<div class="container">
+    		        		    
+    		                        <div class="repeater-wrapper">
+                                                    <div class="repeater-item">
+                                                                    <a href="/media/2026/05/Food-menu-Beds-oficial-ENG-2026-1.pdf" target="_blank" class="common-button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+    <polyline points="14 2 14 8 20 8"></polyline>
+  </svg>Food Menu</a>
+                                                            </div>
+                                                    <div class="repeater-item">
+                                                            </div>
+                                                    <div class="repeater-item">
+                                                                    <a href="/media/2026/04/MenuBed-A4-2026-v1.pdf" target="_blank" class="common-button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+    <polyline points="14 2 14 8 20 8"></polyline>
+  </svg>Drinks Menu</a>
+                                                            </div>
+                                            </div>
+                    			
+    		</div>
+		</div>
+	</div>
+`;
+---
+<Fragment set:html={html} />
+
+<style is:global>
+.button-column .container {
+    display: flex;
+    padding-top: 40px;
+}
+.button-column a.common-button {
+    --line-height: 1.25;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ffa400;
+    border-radius: 100px;
+    color: #454545;
+    cursor: none;
+    display: inline-flex;
+    font-family: tw_cen_mtregular;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: center;
+    letter-spacing: .05em;
+    line-height: 1.25;
+    min-height: 38px;
+    padding:10px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s cubic-bezier(.19,1,.22,1) 0s;
+    margin-right:15px;
+}
+.button-column a.common-button:focus:not([disabled]), .button-column a.common-button:hover:not([disabled]) {
+    background-color: #ffa400;
+    border-color: #ffa400;
+    color: #fff;
+}
+.repeater-wrapper .repeater-item {
+    display: inline-block;
+}
+
+.append-txt {
+    display: none;
+}
+.append-txt {
+    display: none;
+}
+.append-txt {
+    background: #ffa301;
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 19px;
+    margin-bottom: 15px;
+    border-radius: 11px;
+    margin-top: -17px;
+}
+.button-column a.common-button img {
+    max-width: 19px;
+    margin-right: 12px;
+}
+.button-column a.common-button:hover img{filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(74%) hue-rotate(244deg) brightness(115%) contrast(100%);}
+.button-column a.common-button svg.feather.feather-file {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+</style>

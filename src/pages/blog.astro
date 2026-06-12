@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import JournalHero from '../components/JournalHero.astro';
+import JournalCardGrid from '../components/JournalCardGrid.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/blog/00-JournalHero.json';
+import grid01 from '../data/sections/blog/01-JournalCardGrid.json';
+
+const m = meta['blog'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <div class="grid">
+    <div class="container">
+      <JournalHero {...hero00.props} />
+      <JournalCardGrid {...grid01.props} />
+    </div>
+  </div>
+</Base>

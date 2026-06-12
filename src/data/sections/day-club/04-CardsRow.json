@@ -1,0 +1,153 @@
+{
+  "type": "CardsRow",
+  "props": {
+    "title": "Explore",
+    "identifier": "6a2a653592f8a",
+    "cards": [
+      {
+        "modifiers": "SimpleCard--small-font SimpleCard--no-below-title",
+        "href": "/day-club/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": false,
+          "pulloutContent": {
+            "images": false,
+            "title": "",
+            "description": "",
+            "above_link_text": "",
+            "link": null
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 964/1125; --six-intrinsic-fallback: 116.70124481328%",
+          "src": "/media/2023/08/dayclub-still-aspect-ratio-6-7-1.webp",
+          "width": 964,
+          "height": 1125,
+          "alt": ""
+        },
+        "titleHtml": "<p>Day Club</p>"
+      },
+      {
+        "modifiers": "SimpleCard--small-font SimpleCard--no-below-title",
+        "href": "/events-calendar/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": false,
+          "pulloutContent": {
+            "images": false,
+            "title": "",
+            "description": "",
+            "above_link_text": "",
+            "link": null
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 4000/4667; --six-intrinsic-fallback: 116.675%",
+          "src": "/media/2026/04/Copy-of-Copy-of-DSC06108-aspect-ratio-6-7.webp",
+          "width": 4000,
+          "height": 4667,
+          "alt": ""
+        },
+        "titleHtml": "<p>Events Calendar</p>"
+      },
+      {
+        "modifiers": "SimpleCard--small-font SimpleCard--no-below-title",
+        "href": "/open-positions/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": false,
+          "pulloutContent": {
+            "images": false,
+            "title": "",
+            "description": "",
+            "above_link_text": "",
+            "link": null
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 514/600; --six-intrinsic-fallback: 116.73151750973%",
+          "src": "/media/2024/04/ROMU1287-Editar-aspect-ratio-6-7.webp",
+          "width": 514,
+          "height": 600,
+          "alt": ""
+        },
+        "titleHtml": "<p>Recruitment</p>"
+      },
+      {
+        "modifiers": "SimpleCard--small-font SimpleCard--no-below-title",
+        "href": "/restaurant-calendar/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": false,
+          "pulloutContent": {
+            "images": false,
+            "title": "",
+            "description": "",
+            "above_link_text": "",
+            "link": null
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 600/700; --six-intrinsic-fallback: 116.66666666667%",
+          "src": "/media/2023/08/Restaurant-aspect-ratio-6-7.webp",
+          "width": 600,
+          "height": 700,
+          "alt": ""
+        },
+        "titleHtml": "<p>Restaurant</p>"
+      },
+      {
+        "modifiers": "SimpleCard--small-font SimpleCard--no-below-title",
+        "href": "/celebration-packages/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": false,
+          "pulloutContent": {
+            "images": false,
+            "title": "",
+            "description": "",
+            "above_link_text": "",
+            "link": null
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 514/600; --six-intrinsic-fallback: 116.73151750973%",
+          "src": "/media/2023/08/CelebrationPackages-aspect-ratio-6-7.webp",
+          "width": 514,
+          "height": 600,
+          "alt": ""
+        },
+        "titleHtml": "<p>Celebration Packages</p>"
+      },
+      {
+        "modifiers": "SimpleCard--small-font SimpleCard--no-below-title",
+        "href": "https://store.obeachibiza.com/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": false,
+          "pulloutContent": {
+            "images": false,
+            "title": "",
+            "description": "",
+            "above_link_text": "",
+            "link": null
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 514/600; --six-intrinsic-fallback: 116.73151750973%",
+          "src": "/media/2023/08/Boutique-aspect-ratio-6-7.webp",
+          "width": 514,
+          "height": 600,
+          "alt": ""
+        },
+        "titleHtml": "<p>The Boutique</p>"
+      }
+    ]
+  }
+}

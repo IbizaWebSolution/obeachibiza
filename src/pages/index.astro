@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import TextAndLink from '../components/TextAndLink.astro';
+import CTAs from '../components/CTAs.astro';
+import Marquee from '../components/Marquee.astro';
+import EventsRow from '../components/EventsRow.astro';
+import CardsRow from '../components/CardsRow.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/home/00-HeroCTA.json';
+import textAndLink01 from '../data/sections/home/01-TextAndLink.json';
+import ctas02 from '../data/sections/home/02-CTAs.json';
+import marquee03 from '../data/sections/home/03-Marquee.json';
+import hero04 from '../data/sections/home/04-HeroCTA.json';
+import eventsRow05 from '../data/sections/home/05-EventsRow.json';
+import cardsRow06 from '../data/sections/home/06-CardsRow.json';
+import hero07 from '../data/sections/home/07-HeroCTA.json';
+
+const m = meta['home'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <HeroCTA {...hero00.props} />
+  <article class="post" id="post-16">
+    <div class="grid">
+      <div class="container">
+        <TextAndLink {...textAndLink01.props} />
+        <CTAs {...ctas02.props} />
+        <Marquee {...marquee03.props} />
+        <HeroCTA {...hero04.props} titleTag="h2" />
+        <EventsRow {...eventsRow05.props} />
+        <CardsRow {...cardsRow06.props} />
+        <HeroCTA {...hero07.props} titleTag="h2" />
+      </div>
+    </div>
+  </article>
+</Base>

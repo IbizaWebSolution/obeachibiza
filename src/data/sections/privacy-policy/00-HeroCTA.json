@@ -1,0 +1,22 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "image",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "image-fullscreen",
+    "picture": {
+      "sources": [
+        { "media": "(min-aspect-ratio: 10/5)", "srcset": "" },
+        { "media": "(min-aspect-ratio: 7/4)", "srcset": "" },
+        { "media": "(min-aspect-ratio: 4/3)", "srcset": "" },
+        { "media": "(min-aspect-ratio: 3/4)", "srcset": "" },
+        { "srcset": "" }
+      ],
+      "src": "",
+      "alt": ""
+    },
+    "titleHtml": ""
+  }
+}

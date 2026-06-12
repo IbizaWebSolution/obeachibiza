@@ -1,0 +1,19 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "rounded",
+    "mediaType": "video",
+    "x": "center",
+    "y": "center",
+    "imageStyle": "featured-image",
+    "video": {
+      "mp4": "/media/videos/vimeo-792638068-360p.mp4",
+      "poster": "/media/videos/posters/poster-1595498320.jpg"
+    },
+    "titleHtml": "The Ultimate Day Club Experience",
+    "button": {
+      "href": "/events-calendar/",
+      "label": "Book Now"
+    }
+  }
+}

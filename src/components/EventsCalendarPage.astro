@@ -1,0 +1,205 @@
+---
+import ComingSoon from './ComingSoon.astro';
+
+interface HeroImage {
+	src: string;
+	width: number;
+	height: number;
+	alt: string;
+}
+
+interface ExploreCardImage {
+	src: string;
+	width: number;
+	height: number;
+	ratio: string;
+	fallback: string;
+	alt: string;
+}
+
+interface ExploreCard {
+	href: string;
+	title: string;
+	cursorText: string;
+	image?: ExploreCardImage;
+}
+
+interface Props {
+	heroTitle: string;
+	heroImage: HeroImage;
+	introHtml: string;
+	embed: {
+		iframeId: string;
+		iframeSrc: string;
+		height: number;
+	};
+	explore: {
+		title: string;
+		identifier: string;
+		cards: ExploreCard[];
+	};
+}
+
+const { heroTitle, heroImage, introHtml, embed, explore } = Astro.props;
+
+const heroOptions = JSON.stringify({ introAnimation: false, countdownDate: "" });
+
+const carouselOptions = JSON.stringify({
+	cellCount: explore.cards.length,
+	instagramStyleProgressBar: false,
+	carousel_if_greater_than: [],
+	cellAlign: "left",
+	contain: true,
+	freeScroll: false,
+	lazyLoad: true,
+	fade: false,
+	autoPlay: false,
+	wrapAround: false,
+	cellSelector: ".CardsRow__cell",
+	pageDots: false,
+	groupCells: true,
+	prevNextButtons: false,
+	hash: false,
+	imagesLoaded: true,
+	setGallerySize: true,
+	draggable: true,
+	adaptiveHeight: false,
+	identifier: explore.identifier,
+});
+
+const simpleCardOptions = JSON.stringify({
+	clickToOpenPullout: false,
+	pulloutContent: {
+		images: false,
+		title: "",
+		description: "",
+		above_link_text: "",
+		link: null,
+	},
+	pulloutPanelClass: "js-cta-panel",
+});
+---
+<div g-component="EventsCalendarPage" class="EventsCalendarPage">
+<div class="content-container">
+	<section class="HeroCTA HeroCTA--default HeroCTA--image HeroCTA--x-left HeroCTA--y-bottom  HeroCTA--featured-image" g-component="HeroCTA" g-options={heroOptions}>
+
+		<div class="HeroCTA__inner tm">
+			<div class="HeroCTA__media">
+				<img width={heroImage.width} height={heroImage.height} src={heroImage.src} class="attachment-full size-full wp-post-image" alt={heroImage.alt || heroTitle} decoding="async" fetchpriority="high" data-pin-nopin="nopin">
+			</div>
+			<div class="HeroCTA__content" g-ref="animElem">
+				<h1 class="HeroCTA__title">{heroTitle}</h1>
+				<div class="HeroCTA__banner_logo">
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<div class="container">
+		<h2><Fragment set:html={introHtml} /></h2>
+	</div>
+	<section class="HtmlScriptEmbed " g-component="HtmlScriptEmbed" g-options="null">
+
+		<div class="HtmlScriptEmbed__text">
+			{/*
+				Aquí irá el sistema de reservas propio (sustituye al ticketing externo
+				PremiumGuest). Ver INTEGRACIONES-EXTERNAS.md.
+			*/}
+			<ComingSoon
+				title="Nuestro sistema de reservas"
+				text="Muy pronto podrás elegir el día en el calendario, seleccionar tu cama, mesa o entrada y reservar sin salir de la web."
+				minHeight="600px"
+			/>
+		</div>
+	</section>
+
+
+	<section class="CardsRow " g-options="null" data-identifier={explore.identifier} g-component="CardsRow">
+		<header class="CardsRow__header">
+			<h3 class="CardsRow__title">{explore.title}</h3>
+
+			<div class="CardsRow__header-right">
+				<nav class="CardsRow__carousel-nav is-start" g-ref="nav">
+					<ul class="CardsRow__carousel-nav-list">
+						<li class="CardsRow__carousel-nav-item">
+							<button class="CardsRow__carousel-nav-button" g-ref="prev">Prev</button>
+						</li>
+						<span class="CardsRow__carousel-nav-separator">&nbsp;/&nbsp;</span>
+						<li class="CardsRow__carousel-nav-item">
+							<button class="CardsRow__carousel-nav-button" g-ref="next">Next</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="CardsRow__inner">
+			<section class="Carousel " g-component="Carousel" g-options={carouselOptions} data-identifier={explore.identifier}>
+				{explore.cards.map((card) => (
+					<div class="CardsRow__cell">
+						<div class="SimpleCard  SimpleCard--small-font SimpleCard--no-below-title" g-component="SimpleCard" g-options={simpleCardOptions}>
+							<a href={card.href} class="SimpleCard__link" data-cursor-text={card.cursorText}>
+
+								{card.image && (
+									<div class="SimpleCard__image intrinsic-image" style={`--six-intrinsic-ratio: ${card.image.ratio}; --six-intrinsic-fallback: ${card.image.fallback}`}>
+										<img width={card.image.width} height={card.image.height} src={card.image.src} alt={card.image.alt || card.title} loading="lazy">
+									</div>
+								)}
+
+								<div class="SimpleCard__tags">
+								</div>
+								<div class="SimpleCard__title">
+									<p>{card.title}</p>
+								</div>
+							</a>
+
+						</div>
+					</div>
+				))}
+			</section>
+
+		</div>
+	</section>
+
+
+	<p></p>
+
+	<style is:inline type="text/css">
+		form.post-password-form {grid-column: content / span 24;border: 1px solid #ffa400;padding: 20px;border-radius: 5px;max-width: 500px;margin: 0 auto;}
+
+		.post-password-form label input {
+		    width: 100%;
+		    border-radius: 5px;
+		    border: 1px solid #444;
+		}
+
+		.post-password-form input[type*=submit] {
+		    width: 100%;
+		    margin-top: 4px;
+		}
+
+		.post-password-form label {
+		    font-weight: bold;
+		    color: #000;
+		}
+		.boldgrid-section {
+		    grid-column: content / span 24;
+		}
+		.post-password-form label input {
+		    height: 48px;
+		}
+	section.section-embed-block {
+	    grid-column: content / span 24;
+	}
+	@media(max-width:  768px){
+	section.section-embed-block{
+		   grid-column: content / span 8 !important;
+	}
+	.boldgrid-section {
+	    grid-column: content / span 8 !important;
+	}
+	}
+
+	</style>
+</div>
+</div>

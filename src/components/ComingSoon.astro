@@ -1,0 +1,24 @@
+---
+// Placeholder "Próximamente" para los espacios donde el sitio original
+// embebía un servicio de terceros (PremiumGuest, CoverManager, Google Maps,
+// Instagram). Sustituye a esas integraciones mientras se construye el
+// sistema propio. Ver INTEGRACIONES-EXTERNAS.md.
+interface Props {
+  /** Título grande del bloque, p. ej. "Sistema de reservas". */
+  title: string;
+  /** Texto descriptivo de lo que irá aquí. */
+  text: string;
+  /** Altura mínima del bloque (para reservar el hueco del antiguo iframe). */
+  minHeight?: string;
+}
+
+const { title, text, minHeight = '520px' } = Astro.props;
+---
+
+<div class="ComingSoon" style={`min-height:${minHeight}`}>
+  <div class="ComingSoon__inner">
+    <span class="ComingSoon__badge">Próximamente</span>
+    <h3 class="ComingSoon__title">{title}</h3>
+    <p class="ComingSoon__text">{text}</p>
+  </div>
+</div>

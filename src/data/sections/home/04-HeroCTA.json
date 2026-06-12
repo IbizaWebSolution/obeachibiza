@@ -1,0 +1,26 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "rounded",
+    "mediaType": "image",
+    "x": "left",
+    "y": "center",
+    "imageStyle": "image-fullscreen",
+    "picture": {
+      "sources": [
+        { "media": "(min-aspect-ratio: 10/5)", "srcset": "/media/2023/08/eventstwo-aspect-ratio-5-2.webp" },
+        { "media": "(min-aspect-ratio: 7/4)", "srcset": "/media/2023/08/eventstwo-aspect-ratio-16-9.webp" },
+        { "media": "(min-aspect-ratio: 4/3)", "srcset": "/media/2023/08/eventstwo-aspect-ratio-3-2.webp" },
+        { "media": "(min-aspect-ratio: 3/4)", "srcset": "/media/2023/08/eventstwo-aspect-ratio-1-1.webp" },
+        { "srcset": "/media/2023/08/eventstwo-aspect-ratio-2-3.webp" }
+      ],
+      "src": "/media/2023/08/eventstwo-aspect-ratio-5-2.webp",
+      "alt": ""
+    },
+    "titleHtml": "POOL PARTIES PERFECTED",
+    "button": {
+      "href": "/events-calendar/",
+      "label": "View Calendar"
+    }
+  }
+}

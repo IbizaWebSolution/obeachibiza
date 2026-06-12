@@ -1,0 +1,22 @@
+{
+  "type": "RestaurantBookingCalendar",
+  "props": {
+    "iframe": {
+      "id": "restaurante-obeach-ibiza",
+      "title": "Reservas",
+      "src": "https://www.covermanager.com/reservation/module_restaurant/restaurante-obeach-ibiza/english",
+      "height": 550
+    },
+    "headerTitle": "Open Daily",
+    "headerSubtitle": "13:00pm — 21:00pm",
+    "bodyHtml": "<p>Sip notable wine or carefully crafted cocktails and soak up the venue’s vibrant atmosphere. Take your spot in our buzzing dining area, and dine al fresco in the shade. All of our drinks and dishes are prepared with quality ingredients that are locally sourced where possible and created with love.</p>",
+    "links": [
+      {
+        "label": "Restaurant Menu",
+        "href": "/media/2026/05/MenuObeach-restaurant-oficial-2026-1.pdf",
+        "modifier": "file",
+        "newTab": true
+      }
+    ]
+  }
+}

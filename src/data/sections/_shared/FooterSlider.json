@@ -1,0 +1,52 @@
+{
+  "type": "FooterSlider",
+  "props": {
+    "slides": [
+      {
+        "image": {
+          "src": "/media/2023/08/eventstwo-1-aspect-ratio-1-1.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 1080/1080; --six-intrinsic-fallback: 100%"
+        },
+        "label": "Incredible Events",
+        "title": "There’s a reason why Ibiza is the party capital of the world",
+        "button": {
+          "href": "/events-calendar/",
+          "label": "Book Now"
+        }
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/foood.webp",
+          "width": 800,
+          "height": 800,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 800/800; --six-intrinsic-fallback: 100%"
+        },
+        "label": "Taste the Mediterranean fusion cuisine",
+        "title": "Our restaurant brings tantalising flavours to your plate",
+        "button": {
+          "href": "/restaurant-calendar/",
+          "label": "Book Now"
+        }
+      },
+      {
+        "image": {
+          "src": "/media/2023/08/hotelsibiza-aspect-ratio-16-9-1-aspect-ratio-1-1.webp",
+          "width": 1080,
+          "height": 1080,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 1080/1080; --six-intrinsic-fallback: 100%"
+        },
+        "label": "Stay with us and Party with us",
+        "title": "Experience Bonito and our other stunning hotel options!",
+        "button": {
+          "href": "/bonito-hotel/",
+          "label": "Book Now"
+        }
+      }
+    ]
+  }
+}

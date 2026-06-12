@@ -1,0 +1,121 @@
+{
+  "type": "CardsRow",
+  "props": {
+    "title": "Explore our all-day areas",
+    "identifier": "6a2a65358cf6b",
+    "cards": [
+      {
+        "modifiers": "SimpleCard--no-below-title",
+        "href": "/events-calendar/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": true,
+          "pulloutContent": {
+            "images": [612523, 612666, 612647],
+            "title": "VIP",
+            "description": "<p>Indulge in a premium selection of beds and tables in an exclusive area with prime viewing of the day club and your own personal waiter who will ensure all you have to worry about is enjoying every moment of the day.</p>\n",
+            "above_link_text": "In order to book the VIP area, please select an event from our calendar",
+            "link": {
+              "title": "Book Your Bed",
+              "url": "/events-calendar/",
+              "target": ""
+            }
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 470/549; --six-intrinsic-fallback: 116.8085106383%",
+          "src": "/media/2023/08/vip-aspect-ratio-6-7.webp",
+          "width": 470,
+          "height": 549,
+          "alt": ""
+        },
+        "titleHtml": "<p>Vip</p>"
+      },
+      {
+        "modifiers": "SimpleCard--no-below-title",
+        "href": "/events-calendar/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": true,
+          "pulloutContent": {
+            "images": [612518, 612522, 612520],
+            "title": "Garden",
+            "description": "<p>If you like being in the centre of the action, then this is the area for you. Either plot up poolside, close to the DJ booth or grab a cocktail and jump in your own jacuzzi while having your own dedicated waiter service all day long.</p>\n",
+            "above_link_text": "To book the Garden, please select an event from our calendar",
+            "link": {
+              "title": "Book Now",
+              "url": "/events-calendar/",
+              "target": ""
+            }
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 471/549; --six-intrinsic-fallback: 116.56050955414%",
+          "src": "/media/2023/08/garden.webp",
+          "width": 471,
+          "height": 549,
+          "alt": ""
+        },
+        "titleHtml": "<p>Garden</p>"
+      },
+      {
+        "modifiers": "SimpleCard--no-below-title",
+        "href": "#",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": true,
+          "pulloutContent": {
+            "images": [612654, 612661, 612514],
+            "title": "Sunset Roof Garden",
+            "description": "<p>Overlooking the iconic sunset and Mediterranean sea, the roof garden also sits above the day club giving you perfect aerial views of all of the action below and when you want to take a dip or go to the dancefloor, your beds will be ready and waiting for whenever you want to return.</p>\n",
+            "above_link_text": "To book a spot in the Sunset Roof Garden, please select an event from our calendar",
+            "link": {
+              "title": "Book Now",
+              "url": "/events-calendar/",
+              "target": ""
+            }
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 471/549; --six-intrinsic-fallback: 116.56050955414%",
+          "src": "/media/2023/08/sunset.webp",
+          "width": 471,
+          "height": 549,
+          "alt": ""
+        },
+        "titleHtml": "<p>Sunset</p>"
+      },
+      {
+        "modifiers": "SimpleCard--no-below-title",
+        "href": "/events-calendar/",
+        "cursorText": "VIEW",
+        "options": {
+          "clickToOpenPullout": true,
+          "pulloutContent": {
+            "images": [612523, 612526, 612657],
+            "title": "VIP Garden Lounge",
+            "description": "<p>Our secret VIP garden, perfect for groups that want a little bit of seclusion from the main action but still have full access to the VIP and club.</p>\n",
+            "above_link_text": "To book a spot in the O Beach Lounge, please select an event from our calendar",
+            "link": {
+              "title": "Book Now",
+              "url": "/events-calendar/",
+              "target": ""
+            }
+          },
+          "pulloutPanelClass": "js-cta-panel"
+        },
+        "image": {
+          "style": "--six-intrinsic-ratio: 1607/1875; --six-intrinsic-fallback: 116.67703795893%",
+          "src": "/media/2023/08/CMRobinson-39-1-aspect-ratio-8-5-aspect-ratio-6-7.webp",
+          "width": 1607,
+          "height": 1875,
+          "alt": ""
+        },
+        "titleHtml": "<p>O Lounge</p>"
+      }
+    ]
+  }
+}

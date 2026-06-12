@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import CardsRow from '../components/CardsRow.astro';
+import Marquee from '../components/Marquee.astro';
+import CTAs from '../components/CTAs.astro';
+import DayClubExtra from '../components/pages/DayClubExtra.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/day-club/00-HeroCTA.json';
+import cardsRow01 from '../data/sections/day-club/01-CardsRow.json';
+import marquee02 from '../data/sections/day-club/02-Marquee.json';
+import ctas03 from '../data/sections/day-club/03-CTAs.json';
+import cardsRow04 from '../data/sections/day-club/04-CardsRow.json';
+
+const m = meta['day-club'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <HeroCTA {...hero00.props} />
+  <DayClubExtra>
+    <CardsRow {...cardsRow01.props} />
+    <Marquee {...marquee02.props} />
+    <CTAs {...ctas03.props} />
+    <CardsRow {...cardsRow04.props} />
+  </DayClubExtra>
+</Base>

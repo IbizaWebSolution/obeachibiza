@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroCTA from '../../components/HeroCTA.astro';
+import PageWithSideMenu from '../../components/PageWithSideMenu.astro';
+import heroEN from '../../data/sections/terms-conditions/00-HeroCTA.json';
+import page01 from '../../data/sections/es/terminos-y-condiciones/01-PageWithSideMenu.json';
+
+// El hero de la página ES reutiliza el de la versión EN con título traducido.
+const hero = {
+  ...heroEN.props,
+  titleHtml: 'Términos y Condiciones',
+};
+---
+
+<Base
+  title="Términos y Condiciones - O Beach Ibiza"
+  description="Términos y condiciones de O Beach Ibiza."
+  bodyClass="page"
+>
+  <HeroCTA {...hero} />
+  <article class="post" id="post-54">
+    <div class="grid">
+      <div class="container">
+        <PageWithSideMenu {...page01.props} />
+      </div>
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,9 @@
+{
+  "type": "InstagramFeed",
+  "props": {
+    "title": "Be Social",
+    "followHref": "https://www.instagram.com/obeachibiza/",
+    "followLabel": "Follow us",
+    "photos": []
+  }
+}

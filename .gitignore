@@ -1,0 +1,19 @@
+# dependencias y builds
+node_modules/
+dist/
+.astro/
+
+# copias de respaldo de la purga CSS (originales sin purgar)
+src/styles/*.orig
+src/styles/components/*.orig
+
+# sistema / editor
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.vercel/
+
+# temporales de editor
+*.tmp.*

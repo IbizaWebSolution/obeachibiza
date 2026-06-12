@@ -1,0 +1,64 @@
+---
+interface PictureSource {
+  /** Media query del <source>, p. ej. "(min-aspect-ratio: 10/5)". Omitir en el último source. */
+  media?: string;
+  /** URL local del recurso (variante de aspect-ratio ya resuelta de media-map.json). */
+  srcset: string;
+}
+
+interface Tag {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  /** Imagen responsive <picture> multi aspect-ratio del hero */
+  picture: {
+    sources: PictureSource[];
+    src: string;
+    alt?: string;
+  };
+  /** Fecha tal cual la muestra WP (también se usa en el atributo datetime, como en el original) */
+  date: string;
+  author: string;
+  /** Enlace al post (en la demo: "#") */
+  href: string;
+  title: string;
+  /** Categorías del post */
+  tags?: Tag[];
+}
+
+const { picture, date, author, href, title, tags = [] } = Astro.props;
+---
+
+<article class="JournalHero " g-component="JournalHero" g-options="null">
+  <picture class="[ JournalHero__image JournalHero__image--picture ]">
+    {picture.sources.map((source) => (
+      <source media={source.media} srcset={source.srcset} />
+    ))}
+    <img alt={picture.alt ?? ''} src={picture.src} loading="lazy" />
+  </picture>
+  <div class="JournalHero__content">
+    <div class="JournalHero__byline">
+      <time class="JournalHero__date" datetime={date}>{date}</time>
+      <span>
+        &nbsp;/&nbsp;
+      </span>
+      <p class="JournalHero__author">{author}</p>
+    </div>
+
+    <a href={href} class="JournalHero__link">
+      {/* h1: único título de nivel 1 del blog (la clase define la tipografía) */}
+      <h1 class="JournalHero__title">{title}</h1>
+    </a>
+    {tags.length > 0 && (
+      <ul class="JournalHero__tags">
+        {tags.map((tag) => (
+          <li class="JournalHero__tags__tag">
+            <a href={tag.href}>{tag.label}</a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</article>

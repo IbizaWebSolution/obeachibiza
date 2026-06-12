@@ -1,0 +1,10 @@
+{
+  "type": "TextAndLink",
+  "props": {
+    "modifier": "TextAndLink--half-margin",
+    "html": "<h2>For over 10 years, O Beach Ibiza has been synonymous with the ultimate day club experience. Soak up the Balearic sunshine and Ibiza spirit with daily parties for every music taste and mood.<p></p>\n</h2>",
+    "linkText": "Book Now",
+    "linkHref": "/events-calendar/",
+    "linkTarget": ""
+  }
+}

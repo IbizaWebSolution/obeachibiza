@@ -1,0 +1,44 @@
+---
+import DetailCard from './DetailCard.astro';
+
+interface IntrinsicImage {
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  ratio: string;
+  fallback: string;
+}
+
+interface DetailCardData {
+  image?: IntrinsicImage;
+  title: string;
+  link?: { href: string; label: string; target?: string };
+  subtitleHtml?: string;
+  contentTitle?: string;
+  contentHtml?: string;
+}
+
+interface Props {
+  heading?: string;
+  cols?: number;
+  cards: DetailCardData[];
+}
+
+const { heading, cols = 3, cards } = Astro.props;
+---
+
+<section class={`DetailCardGrid  DetailCardGrid--cols-${cols}`} g-component="DetailCardGrid" g-options="null">
+	{heading && (
+		<header class="[ DetailCardGrid__header ]">
+			<h2 class="[ DetailCardGrid__heading ]">{heading}</h2>
+		</header>
+	)}
+	<ul class="[ DetailCardGrid__list ]">
+		{cards.map((card) => (
+			<li class="[ DetailCardGrid__card ]">
+				<DetailCard {...card} />
+			</li>
+		))}
+	</ul>
+</section>

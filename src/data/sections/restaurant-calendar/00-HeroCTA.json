@@ -1,0 +1,15 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "video",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "featured-image",
+    "video": {
+      "mp4": "/media/videos/vimeo-853934160-360p.mp4",
+      "poster": "/media/videos/posters/poster-1709642818.jpg"
+    },
+    "titleHtml": "The Restaurant"
+  }
+}

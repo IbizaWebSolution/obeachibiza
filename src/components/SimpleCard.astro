@@ -1,0 +1,68 @@
+---
+interface CardImage {
+  style: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+interface PulloutLink {
+  title: string;
+  url: string;
+  target: string;
+}
+
+interface PulloutContent {
+  images: number[] | false;
+  title: string;
+  description: string;
+  above_link_text: string;
+  link: PulloutLink | null;
+}
+
+interface CardOptions {
+  clickToOpenPullout: boolean;
+  pulloutContent: PulloutContent;
+  pulloutPanelClass: string;
+}
+
+interface Props {
+  modifiers?: string;
+  href: string;
+  cursorText?: string;
+  options: CardOptions | Record<string, unknown>;
+  image?: CardImage | null;
+  titleHtml: string;
+}
+
+const {
+  modifiers = '',
+  href,
+  cursorText = 'VIEW',
+  options,
+  image = null,
+  titleHtml,
+} = Astro.props;
+
+// alt descriptivo: si el dato viene vacío, se deriva del título de la tarjeta
+const imageAlt = image?.alt || titleHtml.replace(/<[^>]*>/g, '').trim();
+---
+
+<div class={`SimpleCard  ${modifiers}`} g-component="SimpleCard" g-options={JSON.stringify(options)}>
+	<a href={href} class="SimpleCard__link" data-cursor-text={cursorText}>
+
+		{image && (
+			<div class="SimpleCard__image intrinsic-image" style={image.style}>
+				<img src={image.src} width={image.width} height={image.height} alt={imageAlt} loading="lazy" />
+			</div>
+		)}
+
+		<div class="SimpleCard__tags">
+					</div>
+					<div class="SimpleCard__title">
+				<Fragment set:html={titleHtml} />
+							</div>
+			</a>
+
+</div>

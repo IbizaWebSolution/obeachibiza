@@ -1,0 +1,151 @@
+---
+// Layout base de la demo: head + chrome compartido (header, burger, slideouts,
+// instagram, slider del pie, footer, badge, overlay y cursor).
+// Orden de carga de la web original (ver _scrape/home.html):
+// style.min.css (legacy-theme) → legacy.css → main.css → six-blocks.css →
+// owl.carousel → custom-style → CSS de componentes. El global.css de la
+// demo va siempre el último.
+import '../styles/legacy-theme.css';
+import '../styles/components/legacy.css';
+import '../styles/components/main.css';
+import '../styles/components/six-blocks.css';
+import '../styles/owl.carousel.css';
+import '../styles/custom-style.css';
+import '../styles/components/BlinkingTitle.css';
+import '../styles/components/BurgerMenu.css';
+import '../styles/components/BurgerMenuCTA.css';
+import '../styles/components/Card.css';
+import '../styles/components/CardsRow.css';
+import '../styles/components/Carousel.css';
+import '../styles/components/CTAPullout.css';
+import '../styles/components/CTAs.css';
+import '../styles/components/Cursor.css';
+import '../styles/components/DetailCard.css';
+import '../styles/components/DetailCardGrid.css';
+import '../styles/components/EventPullout.css';
+import '../styles/components/EventsCalendarPage.css';
+import '../styles/components/EventsRow.css';
+import '../styles/components/Footer.css';
+import '../styles/components/Header.css';
+import '../styles/components/HeroCTA.css';
+import '../styles/components/HtmlScriptEmbed.css';
+import '../styles/components/ImageRow.css';
+import '../styles/components/InstagramFeed.css';
+import '../styles/components/JournalCard.css';
+import '../styles/components/JournalCardGrid.css';
+import '../styles/components/JournalHero.css';
+import '../styles/components/LanguageSwitcher.css';
+import '../styles/components/Marquee.css';
+import '../styles/components/Newsletter.css';
+import '../styles/components/Overlay.css';
+import '../styles/components/PageWithSideMenu.css';
+import '../styles/components/PositionsListings.css';
+import '../styles/components/PositionsPullout.css';
+import '../styles/components/RestaurantBookingCalendar.css';
+import '../styles/components/RotatingBadge.css';
+import '../styles/components/SimpleCard.css';
+import '../styles/components/Slide.css';
+import '../styles/components/SlideOut.css';
+import '../styles/components/Slider.css';
+import '../styles/components/TextAndLink.css';
+import '../styles/wp-inline.css';
+import '../styles/global.css';
+
+import Header from '../components/chrome/Header.astro';
+import BurgerMenu from '../components/chrome/BurgerMenu.astro';
+import SlideOutPanels from '../components/chrome/SlideOutPanels.astro';
+import Footer from '../components/chrome/Footer.astro';
+import InstagramFeed from '../components/InstagramFeed.astro';
+import FooterSlider from '../components/FooterSlider.astro';
+
+import instagramData from '../data/sections/_shared/InstagramFeed.json';
+import footerSliderData from '../data/sections/_shared/FooterSlider.json';
+
+import { localePath, defaultLocale, locales, switchLocalePath, type Locale } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description?: string;
+  bodyClass?: string;
+}
+
+const { title, description = '', bodyClass = '' } = Astro.props;
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const htmlLang = locale === 'en' ? 'en-GB' : locale;
+
+// SEO: canonical, alternates por idioma y OpenGraph
+const site = Astro.site ?? new URL('https://obeachibiza.com');
+const canonical = new URL(Astro.url.pathname, site);
+const alternates = locales.map((code) => ({
+  code,
+  href: new URL(switchLocalePath(Astro.url.pathname, code as Locale), site).href,
+}));
+const ogImage = new URL('/media/videos/posters/poster-1704537394.jpg', site).href;
+
+// clases de body del WP original, sin las que gestionaba GSAP/JS
+const bodyClasses = [...new Set(`not-admin has-blocks ${bodyClass}`.split(/\s+/))]
+  .filter((c) => c && c !== 'gasp-loading')
+  .join(' ');
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical.href} />
+    {alternates.map((alt) => (
+      <link rel="alternate" hreflang={alt.code} href={alt.href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(switchLocalePath(Astro.url.pathname, 'en'), site).href} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="O Beach Ibiza" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={locale === 'en' ? 'en_GB' : locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/tw_cen_mt-webfont.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/gt-proelium.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class={bodyClasses} g-component="BaseTheme">
+    <Header />
+    <BurgerMenu />
+
+    <main class="[ l-Main ]" id="swup">
+      <slot />
+    </main>
+
+    <div class="[ js-site-overlay ][ u-site-overlay ]"></div>
+
+    <SlideOutPanels />
+
+    <InstagramFeed {...instagramData.props} />
+
+    <FooterSlider {...footerSliderData.props} />
+
+    <Footer />
+
+    <a class="RotatingBadge " g-component="RotatingBadge" g-options="null" href={localePath(locale, '/events-calendar/')}>
+      <span class="RotatingBadge__badge"></span>
+      <h5>Book</h5>
+    </a>
+
+    <div class="Overlay " g-component="Overlay" g-options="null"></div>
+
+    <div class="Cursor " g-component="Cursor" g-options="null">
+      <span g-ref="text"></span>
+    </div>
+
+    <div class="demo-toast" id="demo-toast" role="status"></div>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

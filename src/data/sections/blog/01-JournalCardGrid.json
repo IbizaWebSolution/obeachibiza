@@ -1,0 +1,169 @@
+{
+  "type": "JournalCardGrid",
+  "props": {
+    "title": "Recent posts",
+    "viewMoreHref": "#",
+    "viewMoreLabel": "View more",
+    "posts": [
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2026/02/thanks-for-voting-djmag-aspect-ratio-3-2.webp",
+          "width": 1080,
+          "height": 720,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 1080/720; --six-intrinsic-fallback: 66.666666666667%"
+        },
+        "date": "10 February 2026",
+        "author": "Laura",
+        "tags": [
+          { "label": "Ibiza", "href": "#" },
+          { "label": "Music", "href": "#" },
+          { "label": "Party", "href": "#" }
+        ],
+        "title": "JOEL CORRY LANDS AT O BEACH IBIZA"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2026/02/DSC00180.webp",
+          "width": 6000,
+          "height": 4000,
+          "alt": "O Beach Ibiza",
+          "style": "--six-intrinsic-ratio: 6000/4000; --six-intrinsic-fallback: 66.666666666667%"
+        },
+        "date": "10 February 2026",
+        "author": "Laura",
+        "tags": [
+          { "label": "Fashion", "href": "#" },
+          { "label": "Ibiza", "href": "#" },
+          { "label": "Music", "href": "#" },
+          { "label": "Party", "href": "#" },
+          { "label": "Travel", "href": "#" }
+        ],
+        "title": "10 Reasons to Visit O Beach Ibiza This Summer"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2025/12/19-lowres-1-1.webp",
+          "width": 2048,
+          "height": 1366,
+          "alt": "ALL DAY, ALL PLAY",
+          "style": "--six-intrinsic-ratio: 2048/1366; --six-intrinsic-fallback: 66.69921875%"
+        },
+        "date": "17 December 2025",
+        "author": "Laura",
+        "tags": [
+          { "label": "Behind the scenes", "href": "#" },
+          { "label": "Ibiza", "href": "#" },
+          { "label": "Music", "href": "#" },
+          { "label": "Party", "href": "#" }
+        ],
+        "title": "ALL PLAY, ALL DAY: Inside O Beach Ibiza’s Summer 2026 Concept"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2025/04/Bonito-Hotel-Ibiza-Five-Star-Hotel-Ibiza-San-Antonio-Family-Friendly-1-aspect-ratio-3-2.webp",
+          "width": 1012,
+          "height": 675,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 1012/675; --six-intrinsic-fallback: 66.699604743083%"
+        },
+        "date": "7 April 2025",
+        "author": "Veebs Sabharwal",
+        "tags": [
+          { "label": "Hotel", "href": "#" },
+          { "label": "Ibiza", "href": "#" },
+          { "label": "Wellbeing", "href": "#" }
+        ],
+        "title": "This new Ibiza hotel opens in 2025 and it's muy Bonito"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2024/08/Five-Mins-With-Alex-Mills-_-O-Beach-Ibiza-aspect-ratio-3-2.webp",
+          "width": 942,
+          "height": 628,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 942/628; --six-intrinsic-fallback: 66.666666666667%"
+        },
+        "date": "15 August 2024",
+        "author": "Veebs Sabharwal",
+        "title": "Five Mins with: Alex Mills"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2024/07/Presenting-Ibiza-Global-Festival-2024-1-aspect-ratio-3-2.webp",
+          "width": 2870,
+          "height": 1913,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 2870/1913; --six-intrinsic-fallback: 66.655052264808%"
+        },
+        "date": "19 July 2024",
+        "author": "Veebs Sabharwal",
+        "tags": [
+          { "label": "Ibiza", "href": "#" },
+          { "label": "Music", "href": "#" }
+        ],
+        "title": "Presenting Ibiza Global Festival 2024"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2024/07/O-Beach-Ibiza-2024-Show-Girls-aspect-ratio-3-2.webp",
+          "width": 937,
+          "height": 625,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 937/625; --six-intrinsic-fallback: 66.702241195304%"
+        },
+        "date": "5 July 2024",
+        "author": "Veebs Sabharwal",
+        "tags": [
+          { "label": "Behind the scenes", "href": "#" },
+          { "label": "Ibiza", "href": "#" },
+          { "label": "Music", "href": "#" },
+          { "label": "Party", "href": "#" }
+        ],
+        "title": "The Making of the 2024 CinOmatic Pool Party"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2024/06/5D5A5345.webp",
+          "width": 3381,
+          "height": 2254,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 3381/2254; --six-intrinsic-fallback: 66.666666666667%"
+        },
+        "date": "20 June 2024",
+        "author": "Veebs Sabharwal",
+        "tags": [
+          { "label": "Behind the scenes", "href": "#" },
+          { "label": "Ibiza", "href": "#" }
+        ],
+        "title": "Join the ON111 revolution"
+      },
+      {
+        "href": "#",
+        "image": {
+          "src": "/media/2024/05/Get-the-O-Beach-Ibiza-2024-CinOmatic-Pool-Party-Looks-aspect-ratio-3-2.webp",
+          "width": 938,
+          "height": 625,
+          "alt": "",
+          "style": "--six-intrinsic-ratio: 938/625; --six-intrinsic-fallback: 66.631130063966%"
+        },
+        "date": "30 May 2024",
+        "author": "Veebs Sabharwal",
+        "tags": [
+          { "label": "Behind the scenes", "href": "#" },
+          { "label": "Fashion", "href": "#" },
+          { "label": "Shopping", "href": "#" }
+        ],
+        "title": "Get the 2024 CinOmatic Pool Party Looks"
+      }
+    ]
+  }
+}

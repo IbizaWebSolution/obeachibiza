@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroCTA from '../components/HeroCTA.astro';
+import FaqsContent from '../components/pages/FaqsContent.astro';
+import meta from '../data/pages-meta.json';
+import hero00 from '../data/sections/faqs/00-HeroCTA.json';
+
+const m = meta['faqs'];
+---
+
+<Base title={m.title} description={m.description} bodyClass={m.bodyClass}>
+  <HeroCTA {...hero00.props} />
+  <FaqsContent />
+</Base>

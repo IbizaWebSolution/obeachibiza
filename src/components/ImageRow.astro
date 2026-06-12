@@ -1,0 +1,36 @@
+---
+interface IntrinsicImage {
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  ratio: string;
+  fallback: string;
+}
+
+interface Props {
+  left?: IntrinsicImage;
+  right?: IntrinsicImage;
+}
+
+const { left, right } = Astro.props;
+---
+
+<section class="ImageRow " g-component="ImageRow" g-options="null">
+	{left && (
+		<div
+			class="[ ImageRow__image ImageRow__image--left ] intrinsic-image"
+			style={`--six-intrinsic-ratio: ${left.ratio}; --six-intrinsic-fallback: ${left.fallback}`}
+		>
+			<img src={left.src} width={left.width} height={left.height} alt={left.alt ?? ''} loading="lazy" />
+		</div>
+	)}
+	{right && (
+		<div
+			class="[ ImageRow__image ImageRow__image--right ] intrinsic-image"
+			style={`--six-intrinsic-ratio: ${right.ratio}; --six-intrinsic-fallback: ${right.fallback}`}
+		>
+			<img src={right.src} width={right.width} height={right.height} alt={right.alt ?? ''} loading="lazy" />
+		</div>
+	)}
+</section>

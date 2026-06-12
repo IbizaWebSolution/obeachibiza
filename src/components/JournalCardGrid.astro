@@ -1,0 +1,100 @@
+---
+interface Tag {
+  label: string;
+  href: string;
+}
+
+interface CardImage {
+  /** URL local ya resuelta de media-map.json */
+  src: string;
+  width: number;
+  height: number;
+  alt?: string;
+  /** Atributo style del wrapper intrinsic-image, p. ej. "--six-intrinsic-ratio: 1080/720; --six-intrinsic-fallback: 66.666666666667%" */
+  style: string;
+}
+
+interface Post {
+  /** Enlace al post (en la demo: "#") */
+  href: string;
+  image: CardImage;
+  /** Fecha tal cual la muestra WP (también se usa en el atributo datetime, como en el original) */
+  date: string;
+  author: string;
+  /** Categorías del post (puede no haber: el <ul> no se renderiza) */
+  tags?: Tag[];
+  title: string;
+}
+
+interface Props {
+  /** Título del BlinkingTitle del header, p. ej. "Recent posts" */
+  title: string;
+  /** Enlace "View more" (header y pie del grid) */
+  viewMoreHref: string;
+  viewMoreLabel: string;
+  posts: Post[];
+}
+
+const { title, viewMoreHref, viewMoreLabel, posts } = Astro.props;
+---
+
+<section class="JournalCardGrid " g-component="JournalCardGrid" g-options="null">
+  <header class="JournalCardGrid__header">
+    <div class="BlinkingTitle " g-component="BlinkingTitle" g-options="null">
+      <h2 class="BlinkingTitle__title">{title}</h2>
+      <a href={viewMoreHref} class="BlinkingTitle__link">{viewMoreLabel}</a>
+    </div>
+  </header>
+  <ul class="JournalCardGrid__cards">
+    {posts.map((post) => (
+      <li class="JournalCardGrid__card">
+        <article
+          class="JournalCard  JournalCard--badges-overlaid JournalCard--cols-1"
+          g-component="JournalCard"
+          g-options="null"
+        >
+          <div class="JournalCard__inner">
+            <a href={post.href} class="JournalCard__image-container">
+              <div class="[ JournalCard__image ] intrinsic-image" style={post.image.style}>
+                <img
+                  src={post.image.src}
+                  width={post.image.width}
+                  height={post.image.height}
+                  alt={post.image.alt || post.title}
+                  loading="lazy"
+                />
+              </div>
+            </a>
+
+            <div class="JournalCard__content">
+              <div class="JournalCard__byline">
+                <time class="JournalCard__date" datetime={post.date}>{post.date}</time>
+                <span>
+                  &nbsp;/&nbsp;
+                </span>
+                <p class="JournalCard__author">{post.author}</p>
+              </div>
+
+              {post.tags && post.tags.length > 0 && (
+                <ul class="JournalCard__tags">
+                  {post.tags.map((tag) => (
+                    <li class="JournalCard__tags__tag">
+                      <a href={tag.href}>{tag.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <h2 class="JournalCard__title">
+                <a href={post.href}>{post.title}</a>
+              </h2>
+            </div>
+          </div>
+        </article>
+      </li>
+    ))}
+  </ul>
+  <p class="JournalCardGrid__view-more">
+    <a href={viewMoreHref} class="JournalCardGrid__link">{viewMoreLabel}</a>
+  </p>
+</section>

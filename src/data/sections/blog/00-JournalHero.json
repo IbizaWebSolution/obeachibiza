@@ -1,0 +1,39 @@
+{
+  "type": "JournalHero",
+  "props": {
+    "picture": {
+      "sources": [
+        {
+          "media": "(min-aspect-ratio: 10/5)",
+          "srcset": "/media/2026/02/Crane_Pool_party2_web-aspect-ratio-5-2.webp"
+        },
+        {
+          "media": "(min-aspect-ratio: 7/4)",
+          "srcset": "/media/2026/02/Crane_Pool_party2_web-aspect-ratio-16-9.webp"
+        },
+        {
+          "media": "(min-aspect-ratio: 4/3)",
+          "srcset": "/media/2026/02/Crane_Pool_party2_web.webp"
+        },
+        {
+          "media": "(min-aspect-ratio: 3/4)",
+          "srcset": "/media/2026/02/Crane_Pool_party2_web-aspect-ratio-1-1.webp"
+        },
+        {
+          "srcset": "/media/2026/02/Crane_Pool_party2_web-aspect-ratio-2-3.webp"
+        }
+      ],
+      "src": "/media/2026/02/Crane_Pool_party2_web-aspect-ratio-5-2.webp",
+      "alt": ""
+    },
+    "date": "12 February 2026",
+    "author": "Laura",
+    "href": "#",
+    "title": "From Idea to Dancefloor: How O Beach Ibiza Creates Unforgettable Themed Parties",
+    "tags": [
+      { "label": "Ibiza", "href": "#" },
+      { "label": "Party", "href": "#" },
+      { "label": "Travel", "href": "#" }
+    ]
+  }
+}

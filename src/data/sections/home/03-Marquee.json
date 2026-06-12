@@ -1,0 +1,12 @@
+{
+  "type": "Marquee",
+  "props": {
+    "modifier": "Marquee--default",
+    "options": {
+      "someOption": "value",
+      "transition": "grow"
+    },
+    "html": "<p>Limited beds and tickets available — <strong>BOOKING SOON!</strong></p>",
+    "repeat": 8
+  }
+}

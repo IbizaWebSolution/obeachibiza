@@ -1,0 +1,66 @@
+---
+import Carousel from './Carousel.astro';
+import SimpleCard from './SimpleCard.astro';
+
+interface CardImage {
+  style: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+interface PositionCard {
+  modifiers?: string;
+  options: Record<string, unknown>;
+  href: string;
+  cursorText?: string;
+  image?: CardImage | null;
+  titleHtml: string;
+}
+
+interface Category {
+  title: string;
+  identifier: string;
+  carouselOptions: Record<string, unknown> | null;
+  positions: PositionCard[];
+}
+
+interface Props {
+  title: string;
+  categories: Category[];
+}
+
+const { title, categories } = Astro.props;
+---
+
+<section class="PositionsListings " g-component="PositionsListings" g-options="null">
+	<h2 class="PositionsListings__title">{title}</h2>
+	{categories.map((category) => (
+		<div class="PositionsListings__category" g-ref="slider" data-identifier={category.identifier}>
+			<div class="PositionsListings__category__header">
+				<h3 class="PositionsListings__category__title">{category.title}</h3>
+				<nav class="PositionsListings__carousel-nav is-start js-nav">
+					<ul class="PositionsListings__carousel-nav-list">
+						<li class="PositionsListings__carousel-nav-item">
+							<button class="PositionsListings__carousel-nav-button js-prev">Prev</button>
+						</li>
+						<span class="PositionsListings__carousel-nav-separator">&nbsp;/&nbsp;</span>
+						<li class="PositionsListings__carousel-nav-item">
+							<button class="PositionsListings__carousel-nav-button js-next">Next</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="PositionsListings__category__carousel js-slider">
+				<Carousel options={category.carouselOptions} identifier={category.identifier}>
+					{category.positions.map((position) => (
+						<div class="PositionsListings__cell">
+							<SimpleCard {...position} />
+						</div>
+					))}
+				</Carousel>
+			</div>
+		</div>
+	))}
+</section>

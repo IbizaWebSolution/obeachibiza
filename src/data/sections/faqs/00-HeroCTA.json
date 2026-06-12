@@ -1,0 +1,15 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "image",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "image-narrow",
+    "image": {
+      "src": "/media/2022/01/beachClubLeadBg.webp",
+      "class": "HeroCTA__single-image"
+    },
+    "titleHtml": "FAQs"
+  }
+}

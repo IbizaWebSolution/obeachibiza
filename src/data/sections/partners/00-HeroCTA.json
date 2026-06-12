@@ -1,0 +1,22 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "image",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "image-fullscreen",
+    "picture": {
+      "sources": [
+        { "media": "(min-aspect-ratio: 10/5)", "srcset": "/media/2023/08/Copy-of-IMG_3152-aspect-ratio-4-3-aspect-ratio-3-2-aspect-ratio-5-2-1.webp" },
+        { "media": "(min-aspect-ratio: 7/4)", "srcset": "/media/2023/08/Copy-of-IMG_3152-aspect-ratio-4-3-aspect-ratio-3-2-aspect-ratio-8-5-aspect-ratio-16-9.webp" },
+        { "media": "(min-aspect-ratio: 4/3)", "srcset": "/media/2023/08/Copy-of-IMG_3152-aspect-ratio-4-3-aspect-ratio-3-2-aspect-ratio-8-5-aspect-ratio-3-2.webp" },
+        { "media": "(min-aspect-ratio: 3/4)", "srcset": "/media/2023/08/Copy-of-IMG_3152-aspect-ratio-4-3-aspect-ratio-3-2-aspect-ratio-8-5-aspect-ratio-1-1.webp" },
+        { "srcset": "/media/2023/08/Copy-of-IMG_3152-aspect-ratio-4-3-aspect-ratio-3-2-aspect-ratio-8-5-aspect-ratio-2-3.webp" }
+      ],
+      "src": "/media/2023/08/Copy-of-IMG_3152-aspect-ratio-4-3-aspect-ratio-3-2-aspect-ratio-5-2-1.webp",
+      "alt": ""
+    },
+    "titleHtml": "Partners"
+  }
+}

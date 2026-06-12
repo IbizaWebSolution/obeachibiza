@@ -1,0 +1,55 @@
+---
+import ComingSoon from './ComingSoon.astro';
+
+interface CalendarIframe {
+	id: string;
+	title: string;
+	src: string;
+	height: number;
+}
+
+interface CalendarLink {
+	label: string;
+	href: string;
+	modifier: string;
+	newTab?: boolean;
+}
+
+interface Props {
+	iframe: CalendarIframe;
+	headerTitle: string;
+	headerSubtitle: string;
+	bodyHtml: string;
+	links: CalendarLink[];
+}
+
+const { iframe, headerTitle, headerSubtitle, bodyHtml, links } = Astro.props;
+---
+<section class="RestaurantBookingCalendar " g-component="RestaurantBookingCalendar" g-options="null">
+	<div class="RestaurantBookingCalendar__calendar">
+		{/* Aquí irá el sistema de reservas del restaurante (sustituye a CoverManager). */}
+		<ComingSoon
+			title="Reservas del restaurante"
+			text="Muy pronto podrás reservar tu mesa eligiendo día, hora y número de comensales directamente aquí."
+			minHeight="480px"
+		/>
+	</div>
+	<div class="RestaurantBookingCalendar__text">
+		<header class="RestaurantBookingCalendar__header">
+			<h4>{headerTitle}</h4>
+			<p>{headerSubtitle}</p>
+		</header>
+		<div class="RestaurantBookingCalendar__body">
+			<Fragment set:html={bodyHtml} />
+		</div>
+		<footer class="RestaurantBookingCalendar__footer">
+			<ul class="RestaurantBookingCalendar__links">
+				{links.map((link) => (
+					<li class={`RestaurantBookingCalendar__link RestaurantBookingCalendar__link--${link.modifier}`}>
+						<a href={link.href} target={link.newTab ? "_blank" : undefined}>{link.label}</a>
+					</li>
+				))}
+			</ul>
+		</footer>
+	</div>
+</section>

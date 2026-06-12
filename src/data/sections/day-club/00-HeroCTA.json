@@ -1,0 +1,15 @@
+{
+  "type": "HeroCTA",
+  "props": {
+    "variant": "default",
+    "mediaType": "video",
+    "x": "left",
+    "y": "bottom",
+    "imageStyle": "featured-image",
+    "video": {
+      "mp4": "/media/videos/vimeo-850210954-540p.mp4",
+      "poster": "/media/videos/posters/poster-1704537394.jpg"
+    },
+    "titleHtml": "Day Club"
+  }
+}
