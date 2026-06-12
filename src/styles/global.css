@@ -235,6 +235,27 @@ body.no-custom-cursor .HeroCTA__media.has-video-control video {
   transform: translateX(-50%) translateY(0);
 }
 
+/* ------------------------------------------------------------------ */
+/* Áreas táctiles ampliadas sin cambio visual (a11y): la zona clicable  */
+/* crece con un pseudo-elemento transparente; el aspecto no varía.      */
+/* ------------------------------------------------------------------ */
+.flickity-page-dots .flickity-page-dot,
+.CardsRow__carousel-nav-button,
+.EventsRow__carousel-nav-button,
+.Footer__icons a,
+.BurgerMenu__close {
+  position: relative;
+}
+.flickity-page-dots .flickity-page-dot::after,
+.CardsRow__carousel-nav-button::after,
+.EventsRow__carousel-nav-button::after,
+.Footer__icons a::after,
+.BurgerMenu__close::after {
+  content: '';
+  inset: -10px;
+  position: absolute;
+}
+
 /* Título de página solo para lectores de pantalla/SEO (páginas cuyo
    hero no lleva título visible por diseño) */
 .visually-hidden {

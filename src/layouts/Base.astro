@@ -135,7 +135,8 @@ const bodyClasses = [...new Set(`not-admin has-blocks ${bodyClass}`.split(/\s+/)
 
     <a class="RotatingBadge " g-component="RotatingBadge" g-options="null" href={localePath(locale, '/events-calendar/')}>
       <span class="RotatingBadge__badge"></span>
-      <h5>Book</h5>
+      {/* no es un encabezado real: role=presentation lo saca del outline (a11y) sin tocar el CSS que estiliza el h5 */}
+      <h5 role="presentation">Book</h5>
     </a>
 
     <div class="Overlay " g-component="Overlay" g-options="null"></div>

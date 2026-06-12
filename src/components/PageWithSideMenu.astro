@@ -28,7 +28,7 @@ const { menuTitle, menuId, menuItems, html } = Astro.props;
 <section class="PageWithSideMenu " g-component="PageWithSideMenu" g-options="null">
 	<nav class="PageWithSideMenu__menu">
 		<header class="PageWithSideMenu__menu__header">
-			<h3>{menuTitle}</h3>
+			<h3 aria-level="2">{menuTitle}</h3>
 		</header>
 		<ul id={menuId} class="menu">
 			{menuItems.map((item) => (

@@ -18,7 +18,8 @@ const { title, text, minHeight = '520px' } = Astro.props;
 <div class="ComingSoon" style={`min-height:${minHeight}`}>
   <div class="ComingSoon__inner">
     <span class="ComingSoon__badge">Próximamente</span>
-    <h3 class="ComingSoon__title">{title}</h3>
+    {/* aria-level=2: sigue al h1 de la página sin saltos (a11y heading-order); la etiqueta h3 se mantiene porque el CSS estiliza por tag */}
+    <h3 class="ComingSoon__title" aria-level="2">{title}</h3>
     <p class="ComingSoon__text">{text}</p>
   </div>
 </div>

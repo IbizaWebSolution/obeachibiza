@@ -46,7 +46,7 @@ const { options = null, image, label, title, description, credit } = Astro.props
 			</div>
 		)}
 		{title && (
-			<h4 class="Slide__title">
+			<h4 class="Slide__title" aria-level="3">
 				{title}
 			</h4>
 		)}
@@ -56,7 +56,7 @@ const { options = null, image, label, title, description, credit } = Astro.props
 			</p>
 		)}
 		{credit && (
-			<h5 class="Slide__credit">
+			<h5 class="Slide__credit" aria-level="4">
 				{credit}
 			</h5>
 		)}

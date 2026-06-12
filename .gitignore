@@ -17,3 +17,5 @@ Thumbs.db
 
 # temporales de editor
 *.tmp.*
+src/styles/*.purged
+src/styles/components/*.purged

@@ -79,7 +79,7 @@ const slideOptions = JSON.stringify({ someOption: 'value', transition: 'grow' })
           <div class="Slide__right">
             <div class="Slide__label">{slide.label}</div>
 
-            <h4 class="Slide__title">{slide.title}</h4>
+            <h4 class="Slide__title" aria-level="3">{slide.title}</h4>
 
             <a href={slide.button.href} class="button">{slide.button.label}</a>
           </div>

@@ -78,10 +78,11 @@ const supportingInfo = [
 
   <div class="Footer__bottom">
     <div class="Footer__left">
-      <a id="footer"></a>
+      {/* ancla de scroll, no enlace navegable (a11y: un <a> vacío cuenta como enlace sin nombre) */}
+      <span id="footer"></span>
       <div class="Footer__cols">
         <div class="Footer__col">
-          <h6 class="Footer__col__title">{t('locationTitle')}</h6>
+          <h6 class="Footer__col__title" aria-level="4">{t('locationTitle')}</h6>
           <ul class="Footer__col__list">
             <li>12-14 Carrer Des Moli</li>
             <li>San Antonio, 07820 Ibiza</li>
@@ -94,7 +95,7 @@ const supportingInfo = [
         </div>
 
         <div class="Footer__col">
-          <h6 class="Footer__col__title">{t('headlineInfo')}</h6>
+          <h6 class="Footer__col__title" aria-level="4">{t('headlineInfo')}</h6>
           <ul class="Footer__col__list">
             {headlineInfo.map((item) => (
               <li class="">
@@ -104,7 +105,7 @@ const supportingInfo = [
           </ul>
         </div>
         <div class="Footer__col">
-          <h6 class="Footer__col__title">{t('supportingInfo')}</h6>
+          <h6 class="Footer__col__title" aria-level="4">{t('supportingInfo')}</h6>
           <ul class="Footer__col__list">
             {supportingInfo.map((item) => (
               <li class="">
@@ -114,7 +115,7 @@ const supportingInfo = [
           </ul>
         </div>
         <div class="Footer__col">
-          <h6 class="Footer__col__title">{t('enquiriesTitle')}</h6>
+          <h6 class="Footer__col__title" aria-level="4">{t('enquiriesTitle')}</h6>
           <ul class="Footer__col__list">
             <li class="">
               <a href="mailto:reservations@obeachibiza.com?subject=O%20Beach%20Ibiza%20enquiry">reservations@obeachibiza.com</a>
